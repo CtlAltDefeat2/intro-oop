@@ -9,11 +9,6 @@ public class Main {
         // ex3();
         // ex4();
         // ex5();
-        var p = new Person();
-        p.speak();
-        p.firstName = "tets";
-
-
     }
 
     private static void ex1() {
