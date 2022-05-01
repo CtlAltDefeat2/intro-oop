@@ -112,7 +112,12 @@ shoppingCart.calculateTotal();
 System.out.println(shoppingCart.getTotal());
 ```
 
-The `ShoppingCart` contains a private `ArrayList` of `Items`.
+The `ShoppingCart` contains a private `ArrayList` of `Items`.  An `Item1` has 
+one constructor that has the following parameters:
+
+- price 
+- quantity
+- description
 
 Output
 ```
