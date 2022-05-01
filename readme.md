@@ -1,12 +1,12 @@
 # Java Intro Object Oriented Paradigm (OOP)
-OOP is the tasteful interaction between objects to achieve a common goal.  A properly object oriented solution
+OOP is the tasteful interaction between objects to achieve a common goal.  A properly object-oriented solution
 ensures that all the objects share the same level of responsibility (weight), and all the objects follow the 
-Single Responsibility Principal (SRP).  The SRP states that an object should focus on one thing 
-and it should do that one thing well. The OOP lends itself 
+Single Responsibility Principal (SRP).  The SRP states that an object should focus on one thing,
+and it should do that one thing well.
 
 Assignments are located [here](assignments.md).
 
-# Pillars of Object Oriented Programming
+# Pillars of Object-Oriented Programming
 Crusty Apple PIE?
 - **C**omposition
 - **A**bstraction
@@ -54,7 +54,7 @@ Inheritance lets one object acquire the properties and methods of another object
   - `extends`
   - `implements`?
 - Java only supports single inheritance, other languages such as Python support multiple inheritance
-- The `public` and `protected` properties are fully accesible
+- The `public` and `protected` properties are fully accessible
 
 # The Golden Rule
 A method is a subroutine or a function, but not both.  A subroutine is code that possibly changes the 
@@ -62,8 +62,8 @@ state (data) of an object but does NOT return anything.  A function is code that
 does NOT change the state of the object.
 
 # Best Practice
-- Avoid heavily nested objects, prefer only one or two levels of inheritance.  
-- Use the `final` keyword in your classes to indicate to other developers that the class should NOT be subclassed/extended.
+- Avoid heavily nested objects, prefer only one or two levels of inheritance
+- Use the `final` keyword in your classes to indicate to other developers that the class should NOT be subclassed/extended
 - Remember the Golden Rule
 
 # Notes
