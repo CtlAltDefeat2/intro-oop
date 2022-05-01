@@ -76,6 +76,7 @@ does NOT change the state of the object.
 # Videos
 - [Java OOPs Concepts (33m)](https://youtu.be/t6bpeBRmozU)
 - [Private, Public, Protected](https://youtu.be/H0OetoieSDQ)
+- [Static](https://youtu.be/qRCEdWQ0f4Q)
 
 # Links
 - [Private, Public, Protected](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
