@@ -75,6 +75,7 @@ does NOT change the state of the object.
 - [Java OOPs Concepts (33m)](https://youtu.be/t6bpeBRmozU)
 
 # Links
+- [Java Docs](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/package-tree.html)
 - [Encapsulation](https://www.sumologic.com/glossary/encapsulation/)
 - [Abstraction](https://stackify.com/oop-concept-abstraction/)
 - [Polymorphism](https://www.mygreatlearning.com/blog/polymorphism-in-java/#what-is-polymorphism)
@@ -82,4 +83,3 @@ does NOT change the state of the object.
 - [Composition](https://www.geeksforgeeks.org/composition-in-java/)
 - [UML](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/what-is-uml/)
 - [Null Billion-Dollar Mistake](https://en.wikipedia.org/wiki/Tony_Hoare)
-
