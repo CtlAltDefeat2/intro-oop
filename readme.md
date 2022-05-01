@@ -63,7 +63,7 @@ does NOT change the state of the object.
 
 # Best Practice
 - Avoid heavily nested objects, prefer only one or two levels of inheritance
-- Use the `final` keyword in your classes to indicate to other developers that the class should NOT be subclassed/extended
+- Use the `final` keyword in your classes to indicate that the class should not be subclassed/extended
 - Remember the Golden Rule
 
 # Notes
