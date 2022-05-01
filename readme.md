@@ -2,7 +2,8 @@
 OOP is the tasteful interaction between objects to achieve a common goal.  A properly object-oriented solution
 ensures that all the objects share the same level of responsibility (weight), and all the objects follow the 
 Single Responsibility Principal (SRP).  The SRP states that an object should focus on one thing,
-and it should do that one thing well.
+and it should do that one thing well.  OOP allows us to create components as if they were real tangible objects 
+in an otherwise intagible world.
 
 Assignments are located [here](assignments.md).
 
@@ -65,11 +66,12 @@ does NOT change the state of the object.
 - Avoid heavily nested objects, prefer only one or two levels of inheritance
 - Use the `final` keyword in your classes to indicate that the class should not be subclassed/extended
 - Remember the Golden Rule
+- The names of intefaces should end with `able`
 
 # Notes
-- Objects can be `null` whereas primitive types cannot.
-- Unified Modeling Language (UML) is a standardized modeling language consisting of an integrated set of diagrams, developed to help system and software developers for specifying, visualizing, constructing, and documenting the artifacts of software systems, as well as for business modeling and other non-software systems.
-- A group of objects that work together can be organized into a package.
+- Objects can be `null` whereas primitive types cannot
+- Unified Modeling Language (UML) is a standardized modeling language consisting of an integrated set of diagrams, developed to help system and software developers for specifying, visualizing, constructing, and documenting the artifacts of software systems, as well as for business modeling and other non-software systems
+- A group of objects that work together can be organized into a package
 
 # Videos
 - [Java OOPs Concepts (33m)](https://youtu.be/t6bpeBRmozU)
