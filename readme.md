@@ -41,9 +41,9 @@ Literal translation is "many forms" or "the condition of occurring in several di
   
 #### Encapsulation
 Refers to the bundling of data, along with the methods that operate on that data, into a single unit.
-- Keywords
-  - `public`
-  - `protected`
+- Keywords (access modifiers)
+  - `public` (Available to subclasses)
+  - `protected` (Available to subclasses, public for the same package, hidden for different package)
   - `private`
   
 #### Inheritance
@@ -73,8 +73,10 @@ does NOT change the state of the object.
 
 # Videos
 - [Java OOPs Concepts (33m)](https://youtu.be/t6bpeBRmozU)
+- [Private, Public, Protected](https://youtu.be/H0OetoieSDQ)
 
 # Links
+- [Private, Public, Protected](https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
 - [Java Docs](https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/package-tree.html)
 - [Encapsulation](https://www.sumologic.com/glossary/encapsulation/)
 - [Abstraction](https://stackify.com/oop-concept-abstraction/)

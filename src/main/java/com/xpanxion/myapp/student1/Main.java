@@ -1,5 +1,7 @@
 package com.xpanxion.myapp.student1;
 
+import java.util.concurrent.atomic.AtomicStampedReference;
+
 public class Main {
     public static void main(String[] args) {
         ex1();
@@ -7,6 +9,11 @@ public class Main {
         // ex3();
         // ex4();
         // ex5();
+        var p = new Person();
+        p.speak();
+        p.firstName = "tets";
+
+
     }
 
     private static void ex1() {
