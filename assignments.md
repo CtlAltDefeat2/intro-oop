@@ -200,3 +200,7 @@ Output:
 *        *
 **********
 ```
+
+# Ex. 7 Your Turn
+
+Model a domain of your choice similar to the exercises above.
