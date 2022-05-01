@@ -117,8 +117,8 @@ shoppingCart.calculateTotal();
 System.out.println(shoppingCart.getTotal());
 ```
 
-The `ShoppingCart` contains a private `ArrayList` of `Items`.  An `Item1` has 
-one constructor that has the following parameters:
+The `ShoppingCart` contains a private `ArrayList` of `Items`.  An `Item` has 
+one constructor and has the following parameters:
 
 - price 
 - quantity
@@ -147,6 +147,17 @@ Add a method to the shopping cart call `shipOrder()`.  This method returns objec
 Override the `toString()` method on the `Invoice` object to produce the following
 output:
 
+Usage:
+```java
+var shoppingCart = new ShoppingCart();
+shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+shoppingCart.calculateTotal();
+var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
+System.out.println(invoice);
+```
+
+Output:
 ```
 Ship to:
   Jon Smith
