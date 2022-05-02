@@ -1,38 +1,46 @@
 package com.xpanxion.myapp.student24;
 
 public class Person {
-        private String firstName;
-        private String lastName;
-        private byte age;
-        private int ssn;
-        private static int personCount = 0;
-        Person(){
-            personCount++;
+    private String firstName;
+    private String lastName;
+    private byte age;
+    private int ssn;
+    private static int personCount = 0;
+
+    Person() {
+        personCount++;
+    }
+
+    Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        personCount++;
+    }
+
+    Person(String firstName, String lastName, byte age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        personCount++;
+    }
+
+    Person(String firstName, String lastName, byte age, int ssn) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.ssn = ssn;
+        personCount++;
+    }
+
+    public String speak() {
+        if (firstName == null) {
+            return ("I don't have a name");
+        } else if (age == 0) {
+            return ("My name is " + firstName + " " + lastName);
         }
-        Person(String firstName, String lastName){
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.personCount++;
-        }
-        Person(String firstName, String lastName, byte age){
-            this.firstName = firstName;
-            this.lastName=lastName;
-            this.age =age;
-            this.personCount++;
-        }
-        Person(String firstName, String lastName, byte age, int ssn){
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.age = age;
-            this.ssn = ssn;
-            this.personCount++;
-        }
-        public String speak(){
-            if(firstName == " "){
-                System.out.println("I dont have a name");
-            }
-            return ("My name is " + firstName + " " + lastName + " and I am " + age + " years old.");
-        }
+        return ("My name is " + firstName + " " + lastName + " and I am " + age + " years old.");
+
+    }
 
     public String getFirstName() {
         return firstName;
@@ -59,14 +67,30 @@ public class Person {
     }
 
     public int getSsn() {
-        return ssn;
+        return ssn % 10000;
     }
 
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
-    public static int getPersonCount(){
-            return personCount;
+
+    public static int getPersonCount() {
+        return personCount;
+    }
+
+    @Override
+    public String toString() {
+
+        if (firstName == null) {
+            return "N/A";
+        }
+        if (ssn == 0) {
+            return firstName + " " + lastName;
+        }
+        ssn = getSsn();
+        return firstName + " " +
+                lastName + " " +
+                +ssn;
     }
 }
 
