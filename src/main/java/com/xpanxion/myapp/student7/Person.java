@@ -6,6 +6,7 @@ public class Person extends Animal {
     private static int personCount = 0;
     private int ssn;
     Person() {
+
         personCount++;
     }
     Person(String firstName, String lastName){
@@ -27,7 +28,13 @@ public class Person extends Animal {
         this.personCount++;
     }
     public String speak(){
-        return "My name is " + firstName + " " + lastName + "and my age is " + age +".";
+        if(firstName == null){
+            return "I don't have a name";
+        }
+        else if(age == 0){//if there's no age
+            return "My name is " + firstName + " " + lastName;
+        }
+        return "My name is " + firstName + " " + lastName + " and my age is " + age +".";
     }
     public String getFirstName() {
         return firstName;
@@ -48,17 +55,24 @@ public class Person extends Animal {
         this.personCount = personCount;
     }
     public int getSsn() {
-        return ssn;
+        return ssn %= 10000; //get the last four digit of ssn
     }
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
-
     @Override
     public String toString() {
+        getSsn();
+        if(firstName == null){ //if there's no info in person
+            return "N/A";
+        }
+        else if(ssn == 0){
+            return  "firstName = " + firstName +
+                    ", lastName = " + lastName;
+        }
         return
-                "firstName= " + firstName +
-                ", lastName= " + lastName +
-                ", ssn= " + ssn ;
+                "firstName = " + firstName +
+                ", lastName = " + lastName +
+                ", ssn = " + ssn ;
     }
 }
