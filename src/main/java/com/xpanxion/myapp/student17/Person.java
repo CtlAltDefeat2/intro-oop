@@ -30,10 +30,10 @@ public class Person {
         if(firstName == null){
             return "I don't have a name";
         }
-        else if(age == 0){//if there's no age
+        else if(age == 0){
             return "My name is " + firstName + " " + lastName;
         }
-        return "My name is " + firstName + " " + lastName + " and my age is " + age +".";
+        return "My name is " + firstName + " " + lastName + " and my age is " + age;
     }
     public String getFirstName() {
         return firstName;
