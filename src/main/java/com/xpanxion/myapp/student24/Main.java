@@ -10,7 +10,7 @@ public class Main {
     }
 
     private static void ex1() {
-        System.out.println("Todo...");
+        System.out.println("Todo..");
     }
 
     private static void ex2() {
