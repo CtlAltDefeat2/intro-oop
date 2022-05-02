@@ -10,7 +10,9 @@ public class Main {
     }
 
     private static void ex1() {
-        System.out.println("Todo...");
+
+
+        System.out.println("this is my test");
     }
 
     private static void ex2() {
