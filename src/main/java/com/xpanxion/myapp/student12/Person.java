@@ -53,6 +53,7 @@ public class Person extends Animal {
         return Integer.toString(ssn).substring(5);
     }
 
+    @Override
     public String toString() {
         if (firstName == null && lastName == null) {
             return "N/A";

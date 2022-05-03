@@ -12,15 +12,9 @@ public class AwesomeNumber {
        this.number = number;
 
     }
-
-    public AwesomeNumber(){
+    public AwesomeNumber() {
 
     }
-    //
-    //Accessors
-    //
-
-
     //
     //Methods
     //
