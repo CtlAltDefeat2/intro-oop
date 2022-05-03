@@ -65,4 +65,14 @@ public class Person {
             return "My name is " + firstName + " " + lastName + " and I am " + age + " years old.";
         }
     }
+
+    @Override
+    public String toString() {
+        if(firstName == null && lastName==null){
+            return "N/A";
+        }else if(ssn == null){
+            return firstName + " " + lastName;
+        }else
+            return firstName + " " + lastName + " " + getSsn();
+    }
 }
