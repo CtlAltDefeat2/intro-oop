@@ -15,11 +15,12 @@ public class Person extends Animal {
         this.lastName = lastName;
         this.personCount++;
     }
-    public Person(String firstName, String lastName, byte age, String ssn){
+    public Person(String firstName, String lastName, byte age, int ssn){
         super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.ssn = ssn.replaceFirst("^.{5}", "*****");
+        String num = String.valueOf(ssn);
+        this.ssn = num.replaceFirst("^.{5}", "*****");
         this.personCount++;
     }
     public static int getPersonCount() {
@@ -40,13 +41,9 @@ public class Person extends Animal {
     public void setAge(int age) {
         this.age = age;
     }
-    public String getSsn() {
-        return ssn;
-    }
     //Override
     @Override
     public String toString() {
-        getSsn();
         if(firstName == null){
             return "N/A";
         }

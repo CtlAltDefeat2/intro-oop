@@ -2,10 +2,10 @@ package com.xpanxion.myapp.student17;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
+        //ex1();
         //ex2();
-        ex3();
-        // ex4();
+        //ex3();
+        ex4();
         // ex5();
     }
 
@@ -13,7 +13,7 @@ public class Main {
         System.out.println();
         var p1 = new Person();
         var p2 = new Person("Jon", "Smith");
-        var p3 = new Person("Mary", "Jane", (byte) 12, "123456789");
+        var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
 
         System.out.println(p1.speak());
         System.out.println(p2.speak());
@@ -38,7 +38,17 @@ public class Main {
     }
 
     private static void ex4() {
-        System.out.println("Todo...");
+        var calculator =  new Calculator();
+        var result1 = calculator.add(1, 2);
+        var result2 = calculator.subtract(4, 2);
+        var result3 = calculator.divide(10, 5);
+        var result4 = calculator.multiply(2, 2);
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+        System.out.println(calculator.getHistory());
     }
 
     private static void ex5() {
