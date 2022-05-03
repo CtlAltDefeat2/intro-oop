@@ -1,6 +1,10 @@
 package com.xpanxion.myapp.student12;
 
 public class Person extends Animal {
+
+    //
+    //Data Members
+    //
     private String firstName;
     private String lastName;
     private byte age;
