@@ -5,18 +5,18 @@ public class Person {
     private String lastName;
     private byte age;
     private int ssn;
-    private int personCount = 0;
+    private static int personCount = 0;
 
     //Constructors
 
     Person() {
-        personCount++;
+        this.personCount++;
     }
 
     Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        personCount++;
+        this.personCount++;
     }
 
     Person(String firstName, String lastName, byte age, int ssn) {
@@ -24,7 +24,13 @@ public class Person {
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
-        personCount++;
+        this.personCount++;
+    }
+    //
+    //Accessors
+    //
+    public static int getPersonCount() {
+        return personCount++;
     }
 
     //Methods/Functions
@@ -51,8 +57,5 @@ public class Person {
         }
     }
 
-    public int getPersonCount() {
-        this.personCount = personCount;
-        return personCount;
-    }
+
 }

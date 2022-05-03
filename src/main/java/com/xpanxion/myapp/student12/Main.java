@@ -23,7 +23,7 @@ public class Main {
         System.out.println(p2);
         System.out.println(p3);
 
-        //System.out.println("Person count: " + Person.getPersonCount());
+        System.out.println("Person count: " + Person.getPersonCount());
     }
 
     private static void ex2() {
