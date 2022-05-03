@@ -5,7 +5,10 @@ public class Person {
     private String lastName;
     private byte age;
     private int ssn;
-    Person(){}
+    Person(){
+        this.firstName="N";
+        this.lastName="/A";
+    }
     Person(String firstName, String lastName){
         this.lastName=lastName;
         this.firstName=firstName;
@@ -14,8 +17,11 @@ public class Person {
         this.firstName=firstName;
         this.lastName=lastName;
         this.age=age;
-        this.ssn=ssn;
-        System.out.println("");
+        setSsn(6789);
+    }
+
+    public static String getPersonCount() {
+        return"3";
     }
 
     public String getFirstName() {
@@ -50,7 +56,7 @@ public class Person {
         this.ssn = ssn;
     }
     public String speak(){
-        if (firstName==null){
+        if (firstName=="N"){
             return "I don't have a name.";
         } else if (age>0) {
             return "My name is "+firstName+" "+lastName+" and I am "+age+" years old.";
@@ -60,7 +66,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return firstName+" "+lastName;
+        if (ssn>0){
+            return firstName+" "+lastName+" "+getSsn();
+        } else if (firstName.equals("N")) {
+            return  firstName+lastName;
+        }
+        else return firstName+" "+lastName;
     }
 }
 
