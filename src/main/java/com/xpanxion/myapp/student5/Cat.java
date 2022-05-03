@@ -15,18 +15,22 @@ public class Cat extends Animal {
         this.catCount++;
     }
     // Methods
-    public static int getCatCount () {
+    public static int getCatCount() {
         return catCount++;
     }
     // Accessors
-    public String getCatName () {
+    public String getCatName() {
         return catName;
     }
-    public String getCatNickName () {
+    public String getCatNickName() {
         return catNickName;
     }
-    public String getCatColor () {
+    public String getCatColor() {
         return catColor;
     }
     // Overrides
+    @Override
+    public String toString() {
+        return (catName + "  " + catNickName + "  " + catColor + "  " + age);
+    }
 }

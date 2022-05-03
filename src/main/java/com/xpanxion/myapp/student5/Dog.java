@@ -29,4 +29,8 @@ public class Dog extends Animal {
         return dogColor;
     }
     // Overrides
+    @Override
+    public String toString() {
+        return (dogName + "  " + dogNickName + "  " + dogColor + "  " + age);
+    }
 }

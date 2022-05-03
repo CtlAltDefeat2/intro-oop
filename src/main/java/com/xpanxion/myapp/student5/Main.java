@@ -25,7 +25,11 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("Todo...");
+        var cat1 = new Cat("Alexander", "Al", "Gray", (byte) 2);
+        var dog1 = new Dog("Thor Odinson", "Thor", "White/Gray", (byte) 4);
+
+        System.out.println(cat1);
+        System.out.println(dog1);
     }
 
     private static void ex3() {

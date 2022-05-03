@@ -4,10 +4,10 @@ public class Animal {
     // Variable Declarations
     byte age;
     // Constructors
-    Animal () {}
+    public Animal () {}
     // Methods
     // Accessors
-    public byte getAge () {
+    public byte getAge() {
         return age;
     }
     // Overrides
