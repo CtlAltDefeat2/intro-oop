@@ -15,18 +15,17 @@ public class Main {
     //    Scanner input = new Scanner(System.in);
         Person p1 = new Person();
         Person p2 = new Person("Jhon", "Smith");
-        Person p3 = new Person("mary", "Joe", (byte) 12,"123456789");
+        Person p3 = new Person("Mary", "Jane", (byte) 12,"123456789");
 
 
-       // System.out.println("Enter student id");
-       // int choice = input.nextInt();
-       // if (choice == 1){
+
         System.out.println(p1.Speak());
         System.out.println(p2.Speak());
         System.out.println(p3.Speak());
         System.out.println(p1);
         System.out.println(p2);
-        System.out.println("person count: " + Person.getPersonCount());
+        System.out.println(p3);
+        System.out.println(Person.getPersonCount());
 
         }
 
