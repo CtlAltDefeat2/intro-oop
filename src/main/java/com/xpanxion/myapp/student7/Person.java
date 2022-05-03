@@ -6,8 +6,7 @@ public class Person extends Animal {
     private static int personCount = 0;
     private int ssn;
     Person() {
-
-        personCount++;
+        this.personCount++;
     }
     Person(String firstName, String lastName){
         this.firstName = firstName;
