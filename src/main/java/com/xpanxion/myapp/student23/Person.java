@@ -51,7 +51,6 @@ package com.xpanxion.myapp.student23;
         retVal = firstName + " " + lastName ;
       }
       if (firstName != null && lastName != null && ssn > 0) {
-
         retVal = firstName + " " + lastName + " " + Integer.toString(ssn).substring(5);
       }
       return retVal;
