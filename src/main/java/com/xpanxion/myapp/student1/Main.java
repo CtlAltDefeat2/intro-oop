@@ -12,22 +12,34 @@ public class Main {
     }
 
     private static void ex1() {
-        System.out.println("Todo...");
-    }
+        var p1 = new Person();
+        var p2 = new Person("Jon", "Smith");
+        var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
 
-    private static void ex2() {
-        System.out.println("Todo...");
-    }
+    System.out.println(p1.speak());
+    System.out.println(p2.speak());
+    System.out.println(p3.speak());
 
-    private static void ex3() {
-        System.out.println("Todo...");
-    }
+    System.out.println(p1);
+    System.out.println(p2);
+    System.out.println(p3);
 
-    private static void ex4() {
-        System.out.println("Todo...");
-    }
+    System.out.println("Person count: " + Person.getPersonCount());
 
-    private static void ex5() {
-        System.out.println("Todo...");
+        //private static void ex2() {
+        //  System.out.println("Todo...");
+        //}
+
+        //private static void ex3() {
+        //  System.out.println("Todo...");
+        //}
+
+        //private static void ex4() {
+        //  System.out.println("Todo...");
+        //}
+
+        //private static void ex5() {
+        //  System.out.println("Todo...");
+        //}
     }
 }
