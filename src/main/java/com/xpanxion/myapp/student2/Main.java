@@ -13,12 +13,12 @@ public class Main {
         var p1=new Person();
         var p2=new Person("Jon", "Smith");
         var p3=new Person("Mary", "Jane", (byte) 12, 123456789);
-        p1.setFirstName("N");
-        p1.setLastName("/A");
 
         System.out.println(p1.speak());
         System.out.println(p2.speak());
         System.out.println(p3.speak());
+        p1.setLastName("N");
+        p1.setLastName("/A");
 
         System.out.println(p1);
         System.out.println(p2);
