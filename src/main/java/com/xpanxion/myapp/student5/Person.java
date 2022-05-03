@@ -4,7 +4,6 @@ public class Person extends Animal {
     // Variable Declarations
     private String firstName;
     private String lastName;
-    private byte age;
     private String ssn;
     private String ssnLast4;
     private static int personCount = 0;
