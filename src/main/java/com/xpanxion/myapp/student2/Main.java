@@ -2,8 +2,8 @@ package com.xpanxion.myapp.student2;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        // ex2();
+        // ex1();
+         ex2();
         // ex3();
         // ex4();
         // ex5();
@@ -28,9 +28,13 @@ public class Main {
     private static void ex2() {
         System.out.println("Todo...");
     }
-
+//added age back to person after doing everything else for Animal, Dog, and Cat because not having age in Person was causing the program not to run.
     private static void ex3() {
-        System.out.println("Todo...");
+
+        int n1= new AwesomeNumber(4);
+        int n2=new AwesomeNumber(2);
+        var result1=AwesomeNumber.add(n1, n2);
+        var result2=AwesomeNumber.subtract(n1, n2);
     }
 
     private static void ex4() {

@@ -1,8 +1,9 @@
 package com.xpanxion.myapp.student2;
 
-public class Person {
+public class Person extends Animal{
     private String firstName;
     private String lastName;
+    //added age back in because there was code that needed age in order to run. Now I don't have any errors.
     private byte age;
     private int ssn;
     Person(){
