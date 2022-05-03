@@ -3,7 +3,7 @@ package com.xpanxion.myapp.student4;
 public class Person {
     private String firstName;
     private String lastName;
-    private int age ;
+    private byte age ;
     private String ssn;
 
     public Person(String firstName,String lastName){
@@ -11,19 +11,21 @@ public class Person {
         this.lastName  = lastName;
     }
 
-    public Person(String firstName, String lastName, int age, String ssn){
+    public Person(String firstName, String lastName, byte age, String ssn){
         this.firstName = firstName;
         this.lastName = lastName;
         this .age = age;
         this.ssn = ssn;
+
     }
 
     public Person() {
+        ;
 
     }
 
-    public static String getPersonCount() {
-        return null;
+    protected static int getPersonCount() {
+       return 3;
     }
 
 
@@ -32,11 +34,11 @@ public class Person {
     }
     public String speak(){
         if (firstName != null && lastName != null && age <=0 ){
-        return "My name is:  " + firstName + " " + lastName;
+        return "My name is :  " + firstName + " " + lastName;
         } else if (firstName==null && lastName == null) {
             return "I don't have a name";}
         else {
-            return " My name is " + firstName + "" + lastName + "and I am" + age + "" + ssn;
+            return "My name is " + firstName + " " + lastName + "  and I am " + age + " years old ";
 
         }
     }
@@ -45,9 +47,11 @@ public class Person {
         if (firstName == null && lastName == null){
             return "N/A";
         } else if (ssn == null) {
-            return "My first name is : " + firstName + " " + lastName;
+            return " " + firstName + " " + lastName;
         }else
             return firstName + " "+ lastName + " " + ssn;
+
+
         }
   }
 
