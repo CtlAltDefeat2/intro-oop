@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student5;
 
-public class Person {
+public class Person extends Animal {
     // Variable declarations
     private String firstName;
     private String lastName;
@@ -42,7 +42,7 @@ public class Person {
     public String getFirstName () {
         return firstName;
     }
-    public void setFirstName(String firstName) {
+    public void setFirstName (String firstName) {
         this.firstName = firstName;
     }
     public String getLastName () {
@@ -51,16 +51,16 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public byte getAge() {
+    public byte getAge () {
         return age;
     }
     public void setAge (byte age) {
         this.age = age;
     }
-    public String getSsn() {
+    public String getSsn () {
         return ssn;
     }
-    public void setSsn(String ssn) {
+    public void setSsn (String ssn) {
         this.ssn = ssn;
     }
     // Overrides
@@ -73,7 +73,6 @@ public class Person {
             personStatement = firstName + " " + lastName;
         } else {
             personStatement = firstName + " " + lastName + " " + ssnLast4;
-        }
-        return personStatement;
+        } return personStatement;
     }
 }

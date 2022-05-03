@@ -2,13 +2,12 @@ package com.xpanxion.myapp.student5;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        // ex2();
+        // ex1();
+        ex2();
         // ex3();
         // ex4();
         // ex5();
     }
-
     private static void ex1() {
         var p1 = new Person();
         var p2 = new Person("Jon", "Smith");
