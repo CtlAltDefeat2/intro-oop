@@ -1,11 +1,17 @@
 package com.xpanxion.myapp.student16;
 
-public class Person {
-    private String firstName;
+//everything in java has an object.
+//class is a blueprint to be reused over and over again.
+public class Person {//name of class always has capitalized first letter.
+   //data members, field, properties, attributes, states
+    //constructors listed below.
+    //constructors - special method in a class set up the class for use.
+    //constructors initialize the class so that it can be used.
+    private String firstName; // string is best for word like first name.
     private String lastName;
     private byte age;
     private int ssn;
-    private static byte personCount = 3; //maybe final?
+    private static byte personCount = 0; //maybe final?
 
     public static void main(String[] args) {
     }
@@ -19,6 +25,7 @@ public class Person {
     public static void setPersonCount(String personCount) {
         Person.personCount = Byte.parseByte(personCount);
     }
+   //behavior is below.
     public String speak() {
         if (firstName == null) {
             return "I don't have name";
@@ -28,6 +35,7 @@ public class Person {
         }
         return "My name is " + firstName + " " + lastName + " and I am " + age + " years old ";
     }
+    //setters and getters (also known as accessors)
     public String getFirstName() {
         return firstName;
     }
@@ -47,13 +55,11 @@ public class Person {
         this.age = age;
     }
     public int getSsn() {
-        return ssn % 10_000;
+        return ssn % 10_000;//will return last 4 or SSN.
     }
-
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
-
     public Person(String mary, String jane, byte b, int i) {
         this.firstName = mary;
         this.lastName = jane;
@@ -69,7 +75,8 @@ public class Person {
     public Person() {
     }
 
-    @Override // overriding the base class.
+    @Override // overriding the base class. (annotation)
+    //created a toString method based on private data.
     public String toString() {
         if (firstName == null)
             return "N/A";

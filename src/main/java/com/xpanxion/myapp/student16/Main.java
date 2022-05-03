@@ -10,9 +10,14 @@ public class Main {
     }
 
     private static void ex1() {
-        var p1 = new Person();
+        byte personCount = 0;
+        var p1 = new Person();// I am instantiating this person class
+        personCount++;
+        //p1 is an object person is the class
         var p2 = new Person("Jon", "Smith");
+        personCount++;
         var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
+        personCount++;
         //need a string to print out name, age, and SSN.
         //review Mary's lecture.
         System.out.println(p1.speak());
@@ -21,7 +26,7 @@ public class Main {
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
-        System.out.println("Person count: " + Person.getPersonCount());
+        System.out.println(personCount);
     }
 
 
