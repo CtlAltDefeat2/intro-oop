@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student12;
 
-public class Person {
+public class Person extends Animal {
     private String firstName;
     private String lastName;
     private byte age;
@@ -38,6 +38,9 @@ public class Person {
     public String speak() {
         if (firstName == null && lastName == null)
             return "I don't have a name.";
+        else if (age != 0){
+            return "My name is " + firstName + " " + lastName + " and I am " + age + " years old";
+        }
         else {
             return "My name is " + firstName + " " + lastName;
         }
