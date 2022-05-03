@@ -1,10 +1,9 @@
 package com.xpanxion.myapp.student17;
 
-public class Person {
+public class Person extends Animal {
     //Date Members
     private String firstName;
     private String lastName;
-    private int age;
     private String ssn;
     private static int personCount = 0;
     //Constructors
@@ -17,9 +16,9 @@ public class Person {
         this.personCount++;
     }
     public Person(String firstName, String lastName, byte age, String ssn){
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.ssn = ssn.replaceFirst("^.{5}", "*****");
         this.personCount++;
     }
@@ -35,18 +34,6 @@ public class Person {
         }
         return "My name is " + firstName + " " + lastName + " and my age is " + age;
     }
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
     public int getAge() {
         return age;
     }
@@ -55,9 +42,6 @@ public class Person {
     }
     public String getSsn() {
         return ssn;
-    }
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
     }
     //Override
     @Override
