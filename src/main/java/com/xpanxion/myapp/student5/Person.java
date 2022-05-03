@@ -1,7 +1,7 @@
 package com.xpanxion.myapp.student5;
 
 public class Person extends Animal {
-    // Variable declarations
+    // Variable Declarations
     private String firstName;
     private String lastName;
     private byte age;
@@ -38,7 +38,7 @@ public class Person extends Animal {
             System.out.println("My name is " + firstName + " " + lastName + " and I am " + age + " years old.");
         } return "";
     }
-    // Gets & Sets
+    // Accessors
     public String getFirstName () {
         return firstName;
     }
@@ -50,12 +50,6 @@ public class Person extends Animal {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-    public byte getAge () {
-        return age;
-    }
-    public void setAge (byte age) {
-        this.age = age;
     }
     public String getSsn () {
         return ssn;
