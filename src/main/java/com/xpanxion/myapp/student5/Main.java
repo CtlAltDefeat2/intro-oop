@@ -12,11 +12,11 @@ public class Main {
     private static void ex1() {
         var p1 = new Person();
         var p2 = new Person("Jon", "Smith");
-        var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
+        var p3 = new Person("Mary", "Jane", (byte) 12, "123456789");
 
-        System.out.println(p1.speak());
-        System.out.println(p2.speak());
-        System.out.println(p3.speak());
+        System.out.print(p1.speak());
+        System.out.print(p2.speak());
+        System.out.print(p3.speak());
 
         System.out.println(p1);
         System.out.println(p2);
