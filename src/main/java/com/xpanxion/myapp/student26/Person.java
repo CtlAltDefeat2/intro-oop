@@ -32,14 +32,16 @@ public class Person {
 
     public String speak() {
 
-        String retval = "I dont have a name";
-        if (firstName != null && lastName != null && age == 0) {
-            retval = "My name is " + firstName + " " + lastName;
+
+        if (firstName == null && lastName == null ) {
+            return "I don't have a name";
         }
-        if (firstName != null && lastName != null && age > 0) {
+        else if (age != 0) {
             return "My name is " + firstName + " " + lastName + " and I am " + age + " years old";
         }
-        return retval;
+        else {
+            return "My name is " + firstName + " " + lastName;
+        }
     }
 
     private String lastFour(Integer SSN) {
@@ -49,15 +51,17 @@ public class Person {
     }
 
     public String toString() {
-        String retVal = "N/A";
-        if (firstName != null && lastName != null && age == 0) {
-            retVal = firstName + " " + lastName;
+
+        if (firstName==null && lastName==null) {
+            return "N/A";
         }
-        if (firstName != null && lastName != null && SSN > 0) {
-            retVal = firstName + " " + lastName + " " + lastFour(SSN);
+        else if (age <= 0 ) {
+            return firstName + " " + lastName;
 
         }
-        return retVal;
+        else {
+            return  firstName + " " + lastName + " " + lastFour(SSN);
+        }
     }
 
 }
