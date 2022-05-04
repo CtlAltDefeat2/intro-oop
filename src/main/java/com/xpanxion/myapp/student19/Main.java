@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
        // ex1();
-         ex2();
-        // ex3();
+         //ex2();
+        ex3();
         // ex4();
         // ex5();
     }
@@ -29,22 +29,25 @@ public class Main {
 
 
     private static void ex2() {
-       // Refactor the `Person` class to subclass (extend) a class called `Animal`.  Move the `age` from the `Person`
-        //class to the `Animal` class. Create a `Dog` and `Cat` class that subclass the `Animal` class.
-
-        //The `Dog` and `Cat` class have the following properties:
-        // Name
-           //     - Nickname
-             //   - Color
         {
            var person1 = new Person ("Matt Smith", "ms", "white", 25, "Smith", "Matt", "123456789");
-            //System.out.println("Dog name,nickName,color");
-           //System.out.println("Cat name,nickName,color");
+           var cat1 = new Cat ("Henry", "Littleone", "White", 5);
+           var dog1 = new Dog ("Charlie", "Cute","Brown", 7);
         }
     }
 
     private static void ex3() {
-        System.out.println("Todo...");
+        var calculator =  new Caliculator();
+        var result1 = calculator.add(1, 2);
+        var result2 = calculator.subtract(4, 2);
+        var result3 = calculator.divide(10, 5);
+        var result4 = calculator.multiply(2, 2);
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+    System.out.println(calculator.getHistory());
     }
 
     private static void ex4() {

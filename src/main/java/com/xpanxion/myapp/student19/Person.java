@@ -17,7 +17,7 @@ public class Person extends Animal{
       this.lastName = lastName;
       this.firstName = firstName;
       this.ssn = ssn;
-        System.out.println("This is Person.");
+        System.out.println("Mat Smith.");
     }
     @Override
     public String toString() {
