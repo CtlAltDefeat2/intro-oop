@@ -23,7 +23,6 @@ public class Main {
         System.out.println(p3);
 
         System.out.println("Person count: " + Person.getPersonCount());
-
     }
 
     private static void ex2() {

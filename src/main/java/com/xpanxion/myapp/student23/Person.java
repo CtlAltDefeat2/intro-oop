@@ -1,11 +1,11 @@
 package com.xpanxion.myapp.student23;
 
-  public class Person {
+  public class Person extends Animal {
     //define attributes
     // Data members, fields, attributes, instance vars, properties, props, or state.
     private String firstName;
     private String lastName;
-    private byte age;
+
     private int ssn;
     private static int personCount;
 
@@ -22,18 +22,18 @@ package com.xpanxion.myapp.student23;
     public Person(String firstName, String lastName, byte age, int ssn){
       this.firstName = firstName;
       this.lastName = lastName;
-      this.age = age;
+     // this.age = age;
       this.ssn = ssn;
       personCount++;
     }
 
     public String speak(){
       String retVal = "I don't have a name.";
-      if (firstName != null && lastName != null && age == 0) {
+      if (firstName != null && lastName != null && getAge() == 0) {
         retVal = "My name is " + firstName + " " + lastName + ".";
       }
-      if (firstName != null && lastName != null && age > 0) {
-        retVal = "My name is " + firstName + " " + lastName + " and I am " + age + " years old.";
+      if (firstName != null && lastName != null && getAge() > 0) {
+        retVal = "My name is " + firstName + " " + lastName + " and I am " + getAge() + " years old.";
       }
       return retVal;
     }
@@ -47,7 +47,7 @@ package com.xpanxion.myapp.student23;
     @Override
     public String toString() {
       String retVal = "N/A";
-      if (firstName != null && lastName != null && age == 0) {
+      if (firstName != null && lastName != null && getAge() == 0) {
         retVal = firstName + " " + lastName ;
       }
       if (firstName != null && lastName != null && ssn > 0) {
