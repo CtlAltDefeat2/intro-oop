@@ -31,7 +31,6 @@ public class Main {
 //
     }
         private static void ex4() {
-            System.out.println("Todo...");
 
             var calculator = new Calculator();
             var result1 = calculator.add(1, 2);

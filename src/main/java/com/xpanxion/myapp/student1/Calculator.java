@@ -12,7 +12,7 @@ public class Calculator implements Calculatable {
 //
 // Constructors
 //
-    public Calculator(ArrayList<String> history) {
+    public Calculator() {
         this.history = history;
     }
 
