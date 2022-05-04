@@ -5,7 +5,7 @@ import javax.swing.text.html.HTMLDocument;
 public class Main {
     public static void main(String[] args) {
 
-        ex1();
+        ex2();
     }
 
     private static void ex1() {
@@ -29,7 +29,13 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("Todo...");
+
+        Dog d1= new Dog("Champion", "champ", "white");
+        System.out.println("His name is " + d1.getName() + " Nickname is "+ d1.getNickname() + " and his color is " + d1.getNickname());
+
+
+
+
     }
 
     private static void ex3() {

@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student26;
 
-public class Person {
+public class Person extends Animal {
 
     private String firstName;
     private String lastName;
