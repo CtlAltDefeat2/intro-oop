@@ -11,7 +11,8 @@ public class AwesomeNumber {
     //
 
     public AwesomeNumber(int number) {
-       this.number = number;
+
+        this.number = number;
     }
     public AwesomeNumber(){
 
