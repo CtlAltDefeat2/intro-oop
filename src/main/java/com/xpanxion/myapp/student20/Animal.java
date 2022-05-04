@@ -1,11 +1,24 @@
 package com.xpanxion.myapp.student20;
 
 public class Animal {
+    //
+    //Date Members
+    //
     protected int age;
-    Animal() {}
+    private boolean True;
+    //
+    //Constructors
+    //
+    Animal (){
+        super();
+    }
     Animal(int age){
+        super();
         this.age = age;
     }
+    //
+    //Accessors
+    //
     public int getAge() {
         return age;
     }
