@@ -1,23 +1,24 @@
 package com.xpanxion.myapp.student19;
 
-public class Person {
+public class Person extends Animal{
     private String lastName;
     private String firstName;
-    private  int age;
     private String ssn;
     //Class Constructors
-    public Person() {  }
-    public Person(String firstName, String lastName) {
-        this.lastName = lastName;
-        this.firstName = firstName;
+  public Person(){
+        }
+    public Person(String name, String nickName, String color, int age, String firstName, String lastName) {
+    super(name, nickName, color, age);
+    this.lastName = lastName;
+    this.firstName = firstName;
     }
-    public Person(String firstName, String lastName, int age,String ssn) {
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.age = age;
-        this.ssn = ssn;
+    public Person(String name, String nickName, String color, int age, String firstName, String lastName, String ssn) {
+      super(name, nickName, color, age);
+      this.lastName = lastName;
+      this.firstName = firstName;
+      this.ssn = ssn;
+        System.out.println("This is Person.");
     }
-
     @Override
     public String toString() {
 
@@ -28,13 +29,12 @@ public class Person {
 
         return "N/A";
     }
-
     public String speak() {
 
         if (firstName != null && lastName!= null && age != 0)
-            return "my mane is " + firstName + " "+lastName + " and my age is " + age;
+            return "my name is " + firstName + " "+lastName + " and my age is " + age;
         else if (firstName != null && lastName!= null)
-            return "my mane is " + firstName + " "+lastName;
+            return "my name is " + firstName + " "+lastName;
 
         return "I don't have a name";
     }
