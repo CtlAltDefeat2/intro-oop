@@ -10,7 +10,6 @@ public class Main { //Wendy
     }
 
     private static void ex1() {
-        System.out.println("Todo...");
         var p1 = new Person();
         var p2 = new Person("Jon", "Smith");
         var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);

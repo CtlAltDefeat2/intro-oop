@@ -1,12 +1,13 @@
 package com.xpanxion.myapp.student25;
 
-public class Person{
+public class Person extends Animal{
 
     //Data Members
     private String firstName;
     private String lastName;
-    private Byte age;
     private Integer ssn;
+
+    private Byte age;
 
     private static int personCount = 0;
 
@@ -16,11 +17,13 @@ public class Person{
         this.personCount++;
    }
    Person ( String firstName, String lastName) {
-        this.firstName = firstName;
+       super();
+       this.firstName = firstName;
         this.lastName = lastName;
         this.personCount++;
     }
     Person (String firstName, String lastName, Byte age, Integer ssn) {
+        super ();
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
