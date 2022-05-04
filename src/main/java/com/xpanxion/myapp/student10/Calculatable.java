@@ -1,7 +1,8 @@
 package com.xpanxion.myapp.student10;
 
+import java.util.ArrayList;
+
 public interface Calculatable {
-    public interface Calculatable {
 
         Integer add(Integer number1, Integer number2);
         Integer subtract(Integer number1, Integer number2);
@@ -10,4 +11,3 @@ public interface Calculatable {
 
         ArrayList<String> getHistory();
     }
-}
