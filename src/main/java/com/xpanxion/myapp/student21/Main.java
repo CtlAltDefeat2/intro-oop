@@ -12,17 +12,44 @@ public class Main {
     private static void ex1() {
 //        Person p1 = new Person();
 //        Person p2 = new Person("Jon", "Smith");
-        Person p3 = new Person("Mary", "Jane", (byte) 12, "123456789");
+//        Person p3 = new Person("Mary", "Jane", (byte) 12, "123456789");
 
 //        System.out.println(p1.speak());
 //        System.out.println(p2.speak());
-        System.out.println(p3.speak());
+//        System.out.println(p3.speak());
 
 //        System.out.println(p1);
 //        System.out.println(p2);
-        System.out.println(p3);
+//        System.out.println(p3);
 
-        System.out.println("Person count: " + Person.getPersonCount());
+//        System.out.println("Person count: " + Person.getPersonCount());
+
+//        Calculator class
+        var calculator =  new Calculator();
+        var result1 = calculator.add(1, 2);
+        var result2 = calculator.subtract(4, 2);
+        var result3 = calculator.divide(10, 5);
+        var result4 = calculator.multiply(2, 2);
+
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+        System.out.println(calculator.getHistory());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private static void ex2() {
