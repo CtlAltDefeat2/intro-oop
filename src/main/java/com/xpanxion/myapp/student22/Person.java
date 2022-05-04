@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Person {
-    public static int getPersonCount() {
-        int personCount = 0;
-       return personCount++;
-    }
 
-     int personCount;
+
+
+
+    private static int personCount;
     private String firstName;
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
+
     }
 
     public byte getAge() {
@@ -43,10 +43,15 @@ public class Person {
 
 
     public Person() {
+        this.personCount++;
     }
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public static int getPersonCount() {
+        return personCount;
     }
 
     public String getLastName() {
@@ -58,12 +63,14 @@ public class Person {
         this.lastName = lastName;
         this.age = age;
         this.ssn = ssn;
+        this.personCount++;
 
     }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.personCount++;
 
     }
 
@@ -87,7 +94,7 @@ public class Person {
         String speak ="";
         if (firstName == null){
              speak = "I dont have a name";
-             personCount++;
+
 
         }
         if (firstName != null & lastName != null){
@@ -98,7 +105,6 @@ public class Person {
        if (firstName != null && lastName != null && ssn != null)
          {
             speak = "My name is " + getFirstName() + " " + getLastName() + " and i am " + getAge() + " old";
-            personCount++;
 
         }
 
