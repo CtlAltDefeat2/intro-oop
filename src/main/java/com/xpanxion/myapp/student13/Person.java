@@ -22,12 +22,16 @@ public class Person {
         this.countPerson++;
     }
     // Additional parameters constructor
-    Person(String firstName, String lastName, byte age, int ssn) {
+    Person(String firstName, String lastName, byte ag, int ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+//        this.age = age;
         this.ssn = ssn;
         this.countPerson++;
+    }
+
+    public Person(byte age) {
+        this.age = age;
     }
 
     public static int getPersonCount() {
