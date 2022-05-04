@@ -1,8 +1,10 @@
 package com.xpanxion.myapp.student16;
 
+import java.util.ArrayList;
+
 //everything in java has an object.
 //class is a blueprint to be reused over and over again.
-public class Person {//name of class always has capitalized first letter.
+public class Person extends Animal {//name of class always has capitalized first letter.
    //data members, field, properties, attributes, states
     //constructors listed below.
     //constructors - special method in a class set up the class for use.
@@ -60,7 +62,8 @@ public class Person {//name of class always has capitalized first letter.
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
-    public Person(String mary, String jane, byte b, int i) {
+    public Person(String mary, String jane, byte age, int i) {
+        super(age);
         this.firstName = mary;
         this.lastName = jane;
         //byte age = 12;
@@ -73,6 +76,7 @@ public class Person {//name of class always has capitalized first letter.
     }
 
     public Person() {
+
     }
 
     @Override // overriding the base class. (annotation)

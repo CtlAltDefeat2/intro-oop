@@ -1,11 +1,14 @@
 package com.xpanxion.myapp.student16;
 
+import java.util.ArrayList;
+
 public class Main {
+
     public static void main(String[] args) {
-        ex1();
+        //ex1();
         // ex2();
-        // ex3();
-        // ex4();
+        // ex3(); //not doing ex3
+         ex4();
         // ex5();
     }
 
@@ -34,16 +37,27 @@ public class Main {
 
 
 // ex2 starts here
-    private static void ex2() {
+    private static void ex2() {//done
+
         System.out.println("Todo...");
     }
 
-    private static void ex3() {
-        System.out.println("Todo...");
-    }
+   // private static void ex3() {
+      //  System.out.println("Todo..."); //not doing ex3
+   // }
 
    private static void ex4() {
-        System.out.println("Todo...");
+       var calculator =  new Calculator();
+       var result1 = calculator.add(1, 2);
+       var result2 = calculator.subtract(4, 2);
+       var result3 = calculator.divide(10, 5);
+       var result4 = calculator.multiply(2, 2);
+
+       System.out.println(result1);
+       System.out.println(result2);
+       System.out.println(result3);
+       System.out.println(result4);
+       System.out.println(calculator.getHistory());
     }
 
     private static void ex5() {
