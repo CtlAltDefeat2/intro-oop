@@ -5,10 +5,10 @@ public class Dog extends Animal {
     private String Nickname;
     private String Color;
 
-    public Dog(){
+    Dog(){
     }
 
-    public Dog(String Name, String Nickname, String Color) {
+    Dog(String Name, String Nickname, String Color) {
         this.Name = Name;
         this.Nickname = Nickname;
         this.Color = Color;

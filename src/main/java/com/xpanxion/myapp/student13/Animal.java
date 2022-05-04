@@ -4,11 +4,14 @@ public class Animal {
 
     private byte age;
 
-    public Animal() {
+    Animal() {
     }
 
     Animal(byte age) {
         this.age = age;
+    }
+    public int getAge() {
+        return age;
     }
 
 }
