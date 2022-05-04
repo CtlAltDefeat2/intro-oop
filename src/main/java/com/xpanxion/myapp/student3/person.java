@@ -1,10 +1,11 @@
 package com.xpanxion.myapp.student3;
 
-public class person {
+import java.security.cert.Extension;
+
+public class person extends animal {
     private static int personCount = 0;
     private String firstname;
     private String lastname;
-    private int age;
     private int ssn;
 
     person() {
@@ -19,7 +20,7 @@ public class person {
     }
 
     person(String firstname, String lastname, int age, int ssn) {
-        this.age = age;
+        super (age);
         this.ssn = ssn;
         this.firstname = firstname;
         this.lastname = lastname;
