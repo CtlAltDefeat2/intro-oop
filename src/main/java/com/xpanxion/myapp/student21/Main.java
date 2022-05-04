@@ -10,16 +10,16 @@ public class Main {
     }
 
     private static void ex1() {
-        Person p1 = new Person();
-        Person p2 = new Person("Jon", "Smith");
+//        Person p1 = new Person();
+//        Person p2 = new Person("Jon", "Smith");
         Person p3 = new Person("Mary", "Jane", (byte) 12, "123456789");
 
-        System.out.println(p1.speak());
-        System.out.println(p2.speak());
+//        System.out.println(p1.speak());
+//        System.out.println(p2.speak());
         System.out.println(p3.speak());
 
-        System.out.println(p1);
-        System.out.println(p2);
+//        System.out.println(p1);
+//        System.out.println(p2);
         System.out.println(p3);
 
         System.out.println("Person count: " + Person.getPersonCount());

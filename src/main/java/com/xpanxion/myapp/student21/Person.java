@@ -1,27 +1,28 @@
 package com.xpanxion.myapp.student21;
 
-public class Person {
+public class Person extends Animal {
     private String firstName;
     private String lastName;
-    private int age;
     private String ssn;
 
     private static int personCount;
 
 
     Person() {
+        super();
         personCount++;
     }
     Person(String firstName, String lastName){
+        super();
         personCount++;
         this.firstName = firstName;
         this.lastName = lastName;
     }
     Person(String firstName, String lastName, int age, String ssn){
+        super(age);
         personCount++;
         this.firstName=firstName;
         this.lastName=lastName;
-        this.age=age;
         this.ssn=ssn;
     }
 
@@ -41,12 +42,7 @@ public class Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public int getAge() {
-        return age;
-    }
-    public void setAge(int age) {
-        this.age = age;
-    }
+
     public String getSsn() {
 
         return ssn.substring(5);
@@ -59,10 +55,10 @@ public class Person {
     public String speak(){
         if(firstName==null&&lastName==null){
             return "I do not have a name.";
-        }else if (firstName !=null && lastName!=null && age == 0) {
+        }else if (firstName !=null && lastName!=null && super.getAge()== 0) {
             return "My name is " + firstName + " " + lastName;
         }else {
-            return "My name is " + firstName + " " + lastName + " and I am " + age + " years old.";
+            return "My name is " + firstName + " " + lastName + " and I am " + super.getAge() + " years old.";
         }
     }
 
