@@ -1,7 +1,5 @@
 package com.xpanxion.myapp.student22;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         ex1();
@@ -13,19 +11,21 @@ public class Main {
 
     private static void ex1() {
     //    Scanner input = new Scanner(System.in);
-        Person p1 = new Person();
-        Person p2 = new Person("Jhon", "Smith");
-        Person p3 = new Person("Mary", "Jane", (byte) 12,"123456789");
+        Dog d1 = new Dog("Bethoven", "Bethy", "Brown", 3);
+        Cat c1 = new Cat("Cathy", "Cat", "Black", 1);
 
+       var a = d1.getName() + " " + d1.getNickName() + " "+ d1.getColor() + " " +d1.getAge();
+        var b = c1.getName() + " " + c1.getNickName() + " "+ c1.getColor() + " " +c1.getAge();
+        System.out.println(a);
+        System.out.println(b);
 
-
-        System.out.println(p1.Speak());
+        /*System.out.println(p1.Speak());
         System.out.println(p2.Speak());
         System.out.println(p3.Speak());
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
-        System.out.println(Person.getPersonCount());
+        System.out.println(Animal.getPersonCount());*/
 
         }
 
