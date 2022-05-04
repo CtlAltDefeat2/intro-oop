@@ -3,7 +3,7 @@ package com.xpanxion.myapp.student13;
 public class Main {
     public static void main(String[] args) {
         ex1();
-        // ex2();
+        ex2();
         // ex3();
         // ex4();
         // ex5();
@@ -26,9 +26,13 @@ public class Main {
 
     }
 
-
     private static void ex2() {
-        System.out.println("Todo...");
+
+        var d1 = new Dog("Rikku", "Spots", "White");
+        var c1 = new Cat("Coset", "Furry", "Black");
+        System.out.println(d1);
+        System.out.println(c1);
+
     }
 
     private static void ex3() {
