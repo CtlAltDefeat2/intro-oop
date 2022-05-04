@@ -1,7 +1,7 @@
 package com.xpanxion.myapp.student15;
 
-public class Person {
-    // Extends someSuperClass //Implements someInterfacesnseperated by commas
+public class Person extends Animal {
+    // Extends someSuperClass //Implements some Interfaces seperated by commas
     // Data Members
     // Constructors
     // Methods
@@ -12,7 +12,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private Byte age;
+
     private Integer ssn;
 
     private static int personCount;
@@ -32,8 +32,7 @@ public class Person {
     Person(String firstName, String lastName, Byte age, Integer ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
-        this.ssn = ssn;
+         this.ssn = ssn;
         this.personCount++;
     }
 
@@ -46,13 +45,24 @@ public class Person {
         var message = "";
         if (firstName == null && lastName == null) {
             message = "I don't have a name";
-        } else if (age == null) {
+        } else if (getAge() == null) {
             message = "My name is " + firstName + " " + lastName;
         } else {
-            message = "My name is " + firstName + " " + lastName + " and I am " + age + " years old.";
+            message = "My name is " + firstName + " " + lastName + " and I am " + getAge() + " years old.";
         }
         return message;
     }
+
+// Refactor the Person class to subclass (extend) a class called Animal. Move the age from the Person class to the Animal class.
+// Create a Dog and Cat class that subclass the Animal class.
+//
+// The Dog and Cat class have the following properties:
+//
+// Name
+// Nickname
+// Color
+
+
 
 
 //
