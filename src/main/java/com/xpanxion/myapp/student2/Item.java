@@ -1,11 +1,11 @@
 package com.xpanxion.myapp.student2;
 
 public class Item {
-    private float price;
+    private static float price;
     private int quantity;
     private String description;
 
-    public float getPrice() {
+    public static float getPrice() {
         return price;
     }
 

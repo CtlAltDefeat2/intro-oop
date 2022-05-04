@@ -1,10 +1,8 @@
 package com.xpanxion.myapp.student2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Spliterator;
 
-public class Calculator {
+public class Calculator implements Calculatable{
     private Integer i;
     private Integer i1;
     private ArrayList<String> history;
