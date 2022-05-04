@@ -1,5 +1,7 @@
 package com.xpanxion.myapp.student12;
 
+import java.util.ArrayList;
+
 public class Item extends ShoppingCart{
     //
     //Data Members
@@ -7,17 +9,20 @@ public class Item extends ShoppingCart{
     public float price;
     public int quantity;
     public String description;
-    //private ArrayList item = new ArrayList();
+    ArrayList<Object> items = new ArrayList<Object>();
 
     //
     //Constructors
     //
-
-    Item(float price, int quantity, String description) {
+    Item(){}
+    Item(float price, int quantity, String description){
         this.price = price;
         this.quantity = quantity;
         this.description = description;
+
+
     }
+
     //
     //Accessors
     //
@@ -32,6 +37,10 @@ public class Item extends ShoppingCart{
 
     public String getDescription() {
         return description;
+    }
+
+    public ArrayList<Object> getItems() {
+        return items;
     }
 
 
