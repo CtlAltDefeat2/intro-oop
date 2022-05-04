@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicStampedReference;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
+        //ex1();
         // ex2();
         // ex3();
         // ex4();
@@ -26,9 +26,9 @@ public class Main {
 
     System.out.println("Person count: " + Person.getPersonCount());
 
-        //private static void ex2() {
-        //  System.out.println("Todo...");
-        //}
+//        private static void ex2() {
+//        System.out.println("Todo...");
+//        }
 
         //private static void ex3() {
         //  System.out.println("Todo...");

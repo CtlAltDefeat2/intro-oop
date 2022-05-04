@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student1;
 
-public class Person {
+public class Person extends Animal {
     //Extends someSuperClass // Implements someInterfaces separated by commas {
     //Data Members
     //Constructors
@@ -12,7 +12,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private Byte age;
+
     private Integer ssn;
     private static int personCount = 0;
 
