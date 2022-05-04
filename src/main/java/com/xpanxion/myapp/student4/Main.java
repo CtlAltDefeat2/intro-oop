@@ -27,6 +27,7 @@ public class Main {
     }
 
     private static void ex2() {
+
         System.out.println("Todo...");
     }
 
