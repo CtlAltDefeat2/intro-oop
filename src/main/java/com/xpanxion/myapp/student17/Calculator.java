@@ -2,65 +2,66 @@ package com.xpanxion.myapp.student17;
 
 import java.util.ArrayList;
 
-interface Calculatable {
 
-    Integer add(Integer number1, Integer number2);
-    Integer subtract(Integer number1, Integer number2);
-    Integer multiply(Integer number1, Integer number2);
-    Integer divide(Integer number1, Integer number2);
-
-    ArrayList<String> getHistory();
-}
-
-public class Calculator {
+public class Calculator implements Calculatable  {
     //
     //Data members
     //
-    private int x;
-    private int y;
+    private int number1;
+    private int number2;
     private ArrayList history = new ArrayList();
     //
     //Constructor
     //
     public Calculator(){
     }
-    Calculator(int x, int y){
-        this.x = x;
-        this.y = y;
+    Calculator(Integer number1, Integer number2){
+        this.number1 = number1;
+        this.number2 = number2;
     }
-    public Integer add(int x, int y){
-        this.x = x;
-        this.y = y;
-        int sum = x + y;
-        String problem = x + " + " + y + " = " + sum;
-        this.history.add(problem);
-        return sum;
-    }
-    public Integer subtract(int x, int y){
-        this.x = x;
-        this.y = y;
-        int sum = x - y;
-        String problem = "\n" + x + " - " + y + " = " + sum;
-        this.history.add(problem);
-        return sum;
 
-    }
-    public Integer divide(int x, int y){
-        this.x = x;
-        this.y = y;
-        int sum = x / y;
-        String problem = "\n" + x + " / " + y + " = " + sum;
+
+
+    @Override
+    public Integer add(Integer number1, Integer number2) {
+        this.number1 = number1;
+        this.number2 = number2;
+        int sum = number1 + number2;
+        String problem = "\n" + number1 + " + " + number2 + " = " + sum;
         this.history.add(problem);
         return sum;
     }
-    public Integer multiply(int x, int y){
-        this.x = x;
-        this.y = y;
-        int sum = x * y;
-        String problem = "\n" + x + " * " + y + " = " + sum;
+
+    @Override
+    public Integer subtract(Integer number1, Integer number2) {
+        this.number1 = number1;
+        this.number2 = number2;
+        int sum = number1 - number2;
+        String problem = "\n" + number1 + " - " + number2 + " = " + sum;
         this.history.add(problem);
         return sum;
     }
+
+    @Override
+    public Integer multiply(Integer number1, Integer number2) {
+        this.number1 = number1;
+        this.number2 = number2;
+        int sum = number1 * number2;
+        String problem = "\n" + number1 + " * " + number2 + " = " + sum;
+        this.history.add(problem);
+        return sum;
+    }
+
+    @Override
+    public Integer divide(Integer number1, Integer number2) {
+        this.number1 = number1;
+        this.number2 = number2;
+        int sum = number1 / number2;
+        String problem = "\n" + number1 + " / " + number2 + " = " + sum;
+        this.history.add(problem);
+        return sum;
+    }
+
     public ArrayList<String> getHistory() {
         return history;
     }
