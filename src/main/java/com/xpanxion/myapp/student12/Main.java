@@ -2,11 +2,11 @@ package com.xpanxion.myapp.student12;
 
 public class Main {
     public static void main(String[] args) {
-        ex1();
-        // ex2();
-         ex3();
-         ex4();
-        // ex5();
+//        ex1();
+//        ex2();
+//        ex3();
+        ex4();
+//        ex5();
     }
 
     private static void ex1() {
@@ -31,7 +31,6 @@ public class Main {
     }
 
     private static void ex3() {
-
         System.out.println("Ex 3.");
         var n1 = new AwesomeNumber(4);
         var n2 = new AwesomeNumber(2);
@@ -42,7 +41,6 @@ public class Main {
     }
 
     private static void ex4() {
-
         System.out.println("Ex. 4");
         var calculator =  new Calculator();
         var result1 = calculator.add(1, 2);

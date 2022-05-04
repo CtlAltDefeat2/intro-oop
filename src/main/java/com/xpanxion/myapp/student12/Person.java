@@ -7,7 +7,7 @@ public class Person extends Animal {
     //
     private String firstName;
     private String lastName;
-    private byte age;
+
     private int ssn;
     private static int personCount = 0;
 

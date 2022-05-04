@@ -3,12 +3,13 @@ package com.xpanxion.myapp.student12;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Calculator{
+public class Calculator
+implements Calculatable {
     //
     //Data Member
     //
-    private int numberX;
-    private int numberY;
+    private Integer numberX;
+    private Integer numberY;
 
     private ArrayList history = new ArrayList();
 
@@ -24,7 +25,8 @@ public class Calculator{
     //
     //Methods
     //
-    public int add(int numberX, int numberY){
+    @Override
+    public Integer add(Integer numberX, Integer numberY) {
         this.numberX = numberX;
         this.numberY = numberY;
 
@@ -33,7 +35,9 @@ public class Calculator{
         this.history.add(sum);
         return result;
     }
-    public int subtract(int numberX, int numberY){
+
+    @Override
+    public Integer subtract(Integer numberX, Integer numberY) {
         this.numberX = numberX;
         this.numberY = numberY;
 
@@ -42,7 +46,20 @@ public class Calculator{
         this.history.add(sub);
         return result;
     }
-    public int divide(int numberX, int numberY){
+
+    @Override
+    public Integer multiply(Integer numberX, Integer numberY) {
+        this.numberX = numberX;
+        this.numberY = numberY;
+
+        int result = numberX * numberY;
+        String product = "\n" + numberX + " * " + numberY + " = " + result;
+        this.history.add(product);
+        return result;
+    }
+
+    @Override
+    public Integer divide(Integer numberX, Integer numberY) {
         this.numberX = numberX;
         this.numberY = numberY;
         if (numberY == 0){
@@ -55,15 +72,7 @@ public class Calculator{
             return result;
         }
     }
-    public int multiply(int numberX, int numberY){
-        this.numberX = numberX;
-        this.numberY = numberY;
 
-        int result = numberX * numberY;
-        String product = "\n" + numberX + " * " + numberY + " = " + result;
-        this.history.add(product);
-        return result;
-    }
     public ArrayList getHistory(){
         //ArrayList history = new ArrayList<String>();
         return history;
