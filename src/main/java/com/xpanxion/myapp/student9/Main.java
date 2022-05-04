@@ -24,6 +24,9 @@ public class Main {
 
             System.out.println("Person count: " + Person.getPersonCount());
 
+            var dog = new Dog("Jonesy", "jones", "brown");
+
+
         }
 
     }
