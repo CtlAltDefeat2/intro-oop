@@ -3,7 +3,12 @@ package com.xpanxion.myapp.student14;
 import java.util.ArrayList;
 
 
+
 public class Calculator implements Calculatable {
+
+    public Calculator(ArrayList<String> calcHistory) {
+        this.calcHistory = calcHistory;
+    }
 
     private ArrayList<String> calcHistory = new ArrayList<String>();
 
