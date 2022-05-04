@@ -2,8 +2,8 @@ package com.xpanxion.myapp.student11;
 
 public class Main {
     public static void main(String[] args) {
-           ex1();
-        // ex2();
+         //ex1();
+           ex2();
         // ex3();
         // ex4();
         // ex5();
@@ -22,24 +22,15 @@ public class Main {
             System.out.println(p2);
             System.out.println(p3);
 
-            System.out.println("Person count: " + Person.getPersonCount());
+
 
 
         }
 
+    //private static void ex1() { System.out.println("Todo...");}
 
 
-
-
-
-
-
-
-
-
-
-
-    private static void ex2() {
+        private static void ex2() {
         System.out.println("Todo...");
     }
 
