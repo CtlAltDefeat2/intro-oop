@@ -26,8 +26,11 @@ public class Main {
     }
 
     private static void ex2() {
-        System.out.println("Todo...");
-    }
+        /* Refactored the person class to extend from the Animal class.
+        Created an animal class and moved the age attribute to the Animal class.
+        Created a dog and cat classes that subclass the Animal class
+        Defined properties Name, Nickname and Color in both dog and cat classes.
+         */
 
     private static void ex3() {
         System.out.println("Todo...");
