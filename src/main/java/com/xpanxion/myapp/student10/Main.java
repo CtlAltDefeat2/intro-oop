@@ -3,9 +3,9 @@ package com.xpanxion.myapp.student10;
 public class Main {
     public static void main(String[] args) {
         ex1();
-        // ex2();
-        // ex3();
-        // ex4();
+        //ex2();
+        ex3();
+        ex4();
         // ex5();
     }
 
@@ -28,15 +28,15 @@ public class Main {
 
 //    private static void ex2() {
 //        System.out.println("Todo...");
-//    }
+//   }
 //
-//    private static void ex3() {
-//        System.out.println("Todo...");
-//    }
-//
-//    private static void ex4() {
-//        System.out.println("Todo...");
-//    }
+    private static void ex3() {
+        System.out.println("ex3");
+    }
+
+    private static void ex4() {
+        System.out.println("ex4");
+    }
 //
 //    private static void ex5() {
 //        System.out.println("Todo...");
