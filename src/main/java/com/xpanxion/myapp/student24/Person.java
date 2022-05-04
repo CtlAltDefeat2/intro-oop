@@ -1,9 +1,11 @@
 package com.xpanxion.myapp.student24;
 
-public class Person {
+import java.util.ArrayList;
+
+public class Person extends Animal{
     private String firstName;
     private String lastName;
-    private byte age;
+    //private byte age;
     private int ssn;
     private static int personCount = 0;
 
@@ -18,16 +20,16 @@ public class Person {
     }
 
     Person(String firstName, String lastName, byte age) {
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         personCount++;
     }
 
     Person(String firstName, String lastName, byte age, int ssn) {
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.ssn = ssn;
         personCount++;
     }
@@ -58,13 +60,7 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public byte getAge() {
-        return age;
-    }
 
-    public void setAge(byte age) {
-        this.age = age;
-    }
 
     public int getSsn() {
         return ssn % 10000;
