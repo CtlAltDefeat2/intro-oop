@@ -14,4 +14,9 @@ public class Cat extends Animal {
         this.Nickname = Nickname;
         this.Color = Color;
     }
+    @Override
+    public String toString() {
+        return Name + Nickname + Color;
+    }
+
 }

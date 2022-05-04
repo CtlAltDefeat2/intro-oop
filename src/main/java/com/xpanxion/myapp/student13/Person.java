@@ -3,7 +3,7 @@ package com.xpanxion.myapp.student13;
 import org.w3c.dom.ls.LSOutput;
 
 // Create Person class
-public class Person {
+public class Person extends Animal{
 
     private String firstName;
     private String lastName;
@@ -22,16 +22,13 @@ public class Person {
         this.countPerson++;
     }
     // Additional parameters constructor
-    Person(String firstName, String lastName, byte ag, int ssn) {
+    Person(String firstName, String lastName, byte age, int ssn) {
+        super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-//        this.age = age;
+        this.age = age;
         this.ssn = ssn;
         this.countPerson++;
-    }
-
-    public Person(byte age) {
-        this.age = age;
     }
 
     public static int getPersonCount() {
@@ -39,6 +36,7 @@ public class Person {
     }
     // Functions
     public String speak() {
+
         if (firstName == null && lastName == null) {
             return "I don't have a name.";
         } else if (age == 0) {

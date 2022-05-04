@@ -1,12 +1,14 @@
 package com.xpanxion.myapp.student13;
 
-public class Animal extends Person {
+public class Animal {
+
+    private byte age;
 
     public Animal() {
     }
 
-    public Animal(byte age) {
-        super(age);
+    Animal(byte age) {
+        this.age = age;
     }
 
 }
