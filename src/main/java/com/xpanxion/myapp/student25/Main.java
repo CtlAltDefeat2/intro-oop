@@ -5,8 +5,8 @@ public class Main { //Wendy
 //        ex1();
         // ex2()
  //        ex3();
-         ex4();
-        // ex5();
+ //        ex4();
+         ex5();
     }
 
     private static void ex1() {
@@ -45,9 +45,14 @@ public class Main { //Wendy
         System.out.println(calculator.getHistory());
     }
 //
-//    private static void ex5() {
-//        System.out.println("Todo...");
-//    }
+    private static void ex5() {
+        var shoppingCart = new ShoppingCart();
+        var item = new Item(2.00F, 4, "Socks");
+        shoppingCart.addItem(item);
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+    }
         }
 
 
