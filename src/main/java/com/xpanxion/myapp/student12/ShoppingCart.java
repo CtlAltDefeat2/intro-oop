@@ -12,7 +12,7 @@ public class ShoppingCart {
     private ArrayList cart;
     private float total;
     private ArrayList<Item> item;
-    private double taxedTotal;
+    private float taxedTotal;
     private float shipFee;
     private String name;
     private String address;
@@ -22,10 +22,11 @@ public class ShoppingCart {
 
     private Item item2;
     private ArrayList description = new ArrayList<>();
-    private ArrayList price = new ArrayList<>();
-    private ArrayList quantity = new ArrayList<>();
+    private ArrayList<Float> price = new ArrayList();
+    private ArrayList<Integer> quantity = new ArrayList();
+    private ArrayList itemTotalList = new ArrayList<>();
 
-    private float itemTotal;
+    private float itemTotal = 0;
 
 
     //
@@ -44,7 +45,7 @@ public class ShoppingCart {
     public float getTotal() {
         //NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
         //String s = n.format(total);
-        return total;
+        return taxedTotal;
     }
 
     //
@@ -62,6 +63,9 @@ public class ShoppingCart {
         while (iterator1.hasNext()) {
             Item item2 = iterator1.next();
             this.total = this.total + (item2.getPrice() * item2.getQuantity());
+            taxedTotal = (float) ((total + shipFee) * 1.1);
+
+
         }
 
     }
@@ -75,10 +79,6 @@ public class ShoppingCart {
         }
     }
 
-    public double taxes() {
-        this.taxedTotal = total * 0.0875;
-        return taxedTotal;
-    }
 
     public String shipOrder(String name, String address, String city, String state, int zipCode) {
         this.name = name;
@@ -87,24 +87,17 @@ public class ShoppingCart {
         this.state = state;
         this.zipCode = zipCode;
 
-        ListIterator<Item> iterator1 = item.listIterator();
-        ArrayList description = new ArrayList();
-        while (iterator1.hasNext()) {
-            Item item2 = iterator1.next();
-            description.add(item2.getDescription());
-        }
-
 
         return "Ship to:" + "\n\t" + name + "\n\t" + address + "\n\t" + city + ", " + state + " " + zipCode +
-                "\n\nItems\n-----\n" + listDesc();
+                "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: " + shipFee + "\n\nTotal Cost\n-------\n" + total;
     }
 
     public String listDesc() {
 
         for (int i = 0; i < item.size(); i++) {
             listFiller();
-            return description.get(i) + "\t" + price.get(i) + "\t(" + quantity.get(i) + ")\t" + "\n"
-                    +description.get(i + 1) + " " + price.get(i + 1) + "\t(" + quantity.get(i + 1) + ")\t" + itemTotal;
+            return description.get(i) + "\t" + price.get(i) + "\t(" + quantity.get(i) + ")\t" +  itemTotalList.get(i) +  "\n"
+                    +description.get(i + 1) + " " + price.get(i + 1) + "\t(" + quantity.get(i + 1) + ")\t" + itemTotalList.get(i+1);
         }
         return null;
     }
@@ -115,14 +108,23 @@ public class ShoppingCart {
         while (iterator1.hasNext()) {
             for (int i = 0; i < item.size(); i++) {
                 Item item2 = iterator1.next();
+                //itemTotal = item2.getQuantity() * item2.getPrice();
                 description.add(item2.getDescription());
                 //this.description = description;
                 price.add(item2.getPrice());
                 //this.price = price;
                 quantity.add(item2.getQuantity());
                 //this.quantity = quantity;
-                var itemTotal = quantity. * price.get(i);
+                itemTotal = quantity.get(i) * price.get(i);
+                this.itemTotalList.add(itemTotal);
+
             }
         }
     }
+
+    @Override
+    public String toString(){
+        return null;
+    }
+
 }
