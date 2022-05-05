@@ -29,7 +29,7 @@ public class Calculator implements Calculatable {
         calculatorHistory.add("\n" + n1 + " / " + n2 + " = " + result);
         return result;
     }
-    public ArrayList<String> getHistory() {
-        return calculatorHistory;
+    public String getHistory() {
+        return String.join("", calculatorHistory);
     }
 }
