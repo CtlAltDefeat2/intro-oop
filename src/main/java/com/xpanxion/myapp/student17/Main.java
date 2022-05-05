@@ -1,12 +1,15 @@
 package com.xpanxion.myapp.student17;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         //ex1();
         //ex2();
         //ex3();
         //ex4();
-        ex5();
+        //ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -58,5 +61,13 @@ public class Main {
         shoppingCart.calculateTotal();
         var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
         System.out.println(invoice);
+    }
+    private static void ex6(){
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10,3));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
+        }
     }
 }

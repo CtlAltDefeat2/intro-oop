@@ -9,5 +9,5 @@ public interface Calculatable {
     Integer multiply(Integer number1, Integer number2);
     Integer divide(Integer number1, Integer number2);
 
-    ArrayList<String> getHistory();
+    String getHistory();
 }

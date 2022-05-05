@@ -9,7 +9,7 @@ public class Calculator implements Calculatable  {
     //
     private int number1;
     private int number2;
-    private ArrayList history = new ArrayList();
+    private ArrayList<String> history = new ArrayList();
     //
     //Constructor
     //
@@ -43,7 +43,9 @@ public class Calculator implements Calculatable  {
         this.history.add(problem);
         return sum;
     }
-    public ArrayList<String> getHistory() {
-        return history;
+    public String getHistory(){
+        //ArrayList history = new ArrayList<String>();
+        String listString = String.join(",",history);
+        return listString;
     }
-}
+    }
