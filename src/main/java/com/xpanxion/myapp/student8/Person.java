@@ -1,13 +1,11 @@
 package com.xpanxion.myapp.student8;
 
-public class Person {
+public class Person extends Animal {
 
     String firstName;
     String lastName;
-    byte Age;
     int SSN;
     int type;
-
     private static int counter;
 
 
