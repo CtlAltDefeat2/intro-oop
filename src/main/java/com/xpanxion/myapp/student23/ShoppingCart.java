@@ -2,7 +2,7 @@ package com.xpanxion.myapp.student23;
 
 import java.util.ArrayList;
 public class ShoppingCart {
-    private ArrayList shoppingcart = new ArrayList<Item>();
+    protected ArrayList<Item> shoppingcart = new ArrayList<Item>();
     private float shipping = 0.00F;
 
     public ShoppingCart() {
@@ -20,7 +20,7 @@ public class ShoppingCart {
         float totalPrice;
         float total = 0.0F;
         Item item;
-        float tax = 0.0F;
+        float tax;
 
         for (int i =0; i< shoppingcart.size(); i++) {
             item = (Item) shoppingcart.get(i);
@@ -38,4 +38,9 @@ public class ShoppingCart {
     public String getTotal() {
         return "$" + calculateTotal();
     }
+
+    public Invoice shipOrder(String name, String StAdd, String city, String state, int zip){
+        Invoice invoice = new Invoice(name,StAdd,city,state,zip,shoppingcart);
+        return invoice;
+   }
 }
