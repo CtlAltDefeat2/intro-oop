@@ -29,7 +29,20 @@ public class Calculator implements Calculatable  {
         this.history.add(problem);
         return sum;
     }
-
+    @Override
+    public Integer multiply(Integer number1, Integer number2) {
+        int sum = number1 * number2;
+        String problem = "\n" + number1 + " * " + number2 + " = " + sum;
+        this.history.add(problem);
+        return sum;
+    }
+    @Override
+    public Integer divide(Integer number1, Integer number2) {
+        int sum = number1 / number2;
+        String problem = "\n" + number1 + " / " + number2 + " = " + sum;
+        this.history.add(problem);
+        return sum;
+    }
     public String getHistory(){
         String listString = String.join("",history);
         return listString;
