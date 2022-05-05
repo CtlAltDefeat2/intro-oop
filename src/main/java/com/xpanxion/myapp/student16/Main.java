@@ -1,15 +1,13 @@
 package com.xpanxion.myapp.student16;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
         //ex1();
         // ex2();
         // ex3(); //not doing ex3
-         ex4();
-        // ex5();
+         //ex4();
+        ex5();
     }
 
     private static void ex1() {
@@ -22,7 +20,7 @@ public class Main {
         var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
         personCount++;
         //need a string to print out name, age, and SSN.
-        //review Mary's lecture.
+        //review Marty's lecture.
         System.out.println(p1.speak());
         System.out.println(p2.speak());
         System.out.println(p3.speak());
@@ -61,6 +59,13 @@ public class Main {
     }
 
     private static void ex5() {
-        System.out.println("Todo...");
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
+        System.out.println(invoice);
+        //System.out.println(shoppingCart.getTotal());
     }
+
 }

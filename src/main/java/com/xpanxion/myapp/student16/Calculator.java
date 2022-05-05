@@ -2,9 +2,10 @@ package com.xpanxion.myapp.student16;
 
 import java.util.ArrayList;
 
-public class Calculator implements Calculable {
-    private ArrayList history = new ArrayList();
-    @Override
+//Abstraction is the class and the interface "Calculable" notice "able" is in all interfaces
+public class Calculator implements Calculable { //implements is an inheritance.
+    private ArrayList history = new ArrayList(); //Encapsulation is private, public, default, protective.
+    @Override //polymorphism
     public Integer add(Integer number1, Integer number2) {
        int sum = number1 + number2;
        String result = number1 + " + " + number2 + " = " + sum + " \n ";
