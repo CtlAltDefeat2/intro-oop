@@ -10,9 +10,10 @@ public class Invoice {
     private int zip;
     private ArrayList<Item>items;
     float total;
+    float  shippingCharge;
 
 
-    public Invoice(String name, String streetAddress, String city, String state, int zip, ArrayList<Item> items,float total) {
+    public Invoice(String name, String streetAddress, String city, String state, int zip, ArrayList<Item> items,float total, float shippingCharge) {
         this.name = name;
         this.streetAddress = streetAddress;
         this.city = city;
@@ -20,15 +21,20 @@ public class Invoice {
         this.zip = zip;
         this.items = items;
         this.total = total;
+        this.shippingCharge = shippingCharge;
     }
-
 
 
     @Override
     public String toString() {
         String item = "";
+        String shipping = "";
         for(Item i : items){
             item +=i;
+        }
+
+        if(shippingCharge==0){
+            shipping="Free";
         }
 
         return  "Ship to: \n  " +
@@ -36,6 +42,6 @@ public class Invoice {
                 streetAddress + "\n  "+
                 city +", " + state + " " + zip + "\n"+
                 "Items" +"\n" +
-                "-----" + "\n"+ item + "\n" + "Free Shipping" + "\n" + "Total cost" +"\n"+ "----------"+"\n"+ "$"+ total;
+                "-----" + "\n"+ item + "\n" + "Shipping: " + shipping+ "\n" + "Total cost" +"\n"+ "----------"+"\n"+ "$"+ total;
     }
 }
