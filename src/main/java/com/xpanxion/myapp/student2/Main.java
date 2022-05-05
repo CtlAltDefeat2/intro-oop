@@ -59,6 +59,8 @@ public class Main {
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
+        var invoice=shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
         System.out.println(shoppingCart.getTotal());
+        System.out.println(invoice);
     }
 }
