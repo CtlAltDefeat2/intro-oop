@@ -1,5 +1,6 @@
 package com.xpanxion.myapp.student5;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -75,5 +76,7 @@ public class Main {
         }
     }
 
-    private static void ex7() { System.out.println("Todo..."); }
+    private static void ex7() {
+        Game.runGame();
+        System.out.println("Todo..."); }
 }
