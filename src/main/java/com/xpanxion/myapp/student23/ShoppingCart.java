@@ -2,7 +2,7 @@ package com.xpanxion.myapp.student23;
 
 import java.util.ArrayList;
 public class ShoppingCart {
-    protected ArrayList<Item> shoppingcart = new ArrayList<Item>();
+    private ArrayList<Item> shoppingcart = new ArrayList<>();
     private float shipping = 0.00F;
 
     public ShoppingCart() {
@@ -23,7 +23,7 @@ public class ShoppingCart {
         float tax;
 
         for (int i =0; i< shoppingcart.size(); i++) {
-            item = (Item) shoppingcart.get(i);
+            item = shoppingcart.get(i);
             totalPrice = item.getPrice()* item.getQuantity();
             tax = totalPrice * 0.1F;
             totalPrice += tax;

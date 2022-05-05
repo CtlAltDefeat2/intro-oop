@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student23;
 
-public class Animal {
+public abstract class Animal {
     private byte age;
 
     public byte getAge() {

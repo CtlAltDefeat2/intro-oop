@@ -23,14 +23,11 @@ public class Invoice {
 
     @Override
     public String toString() {
-        String iv;
+        String invoiceString;
         Item item;
         float total = 0.0F;
 
-        // loop thru this
-        //this.items
-
-        iv =  "Ship to: \n" +
+         invoiceString =  "Ship to: \n" +
                 name + "\n" +
                 address + "\n" +
                 city + "\n" +
@@ -39,20 +36,20 @@ public class Invoice {
 
         for(int i = 0; i < items.size(); i++){
             item = items.get(i);
-            iv += item.getDescription() + " " + "$" + item.getPrice() + " " + "(" + item.getQuantity() +") "+ "$" +
+            invoiceString += item.getDescription() + " " + "$" + item.getPrice() + " " + "(" + item.getQuantity() +") "+ "$" +
                     item.getPrice()* item.getQuantity()+ "\n";
             total += item.getPrice() * item.getQuantity();
         }
         if(total > 10.00){
-            iv += "\nShipping: Free";
+            invoiceString += "\nShipping: Free";
         }
         else{
             total += 5.00;
-            iv += "\nShipping: " + total;
+            invoiceString += "\nShipping: " + total;
         }
-        iv += "\n \nTotal Cost\n--------- \n" + total;
+        invoiceString += "\n \nTotal Cost\n--------- \n" + total;
 
-        return iv;
+        return invoiceString;
 
     }
 
