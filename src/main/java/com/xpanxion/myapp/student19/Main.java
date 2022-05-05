@@ -34,7 +34,7 @@ public class Main {
         }
     }
 
-    private static void ex3() {
+    private static void ex4() {
         var calculator =  new Caliculator();
         var result1 = calculator.add(1, 2);
         var result2 = calculator.subtract(4, 2);
@@ -48,10 +48,10 @@ public class Main {
     System.out.println(calculator.getHistory());
     }
 
-    private static void ex4() {
+    private static void ex3() {
         System.out.println("Todo...");
     }
-
+//skipping Ex.3
     private static void ex5() {
         var shoppingCart = new ShoppingCart(5);
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
