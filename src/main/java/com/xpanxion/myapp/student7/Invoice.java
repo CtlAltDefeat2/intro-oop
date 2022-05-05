@@ -26,16 +26,12 @@ public class Invoice{
     public String toString() {
         String shipString = "";
         String items = "";
-        for(Item i : cart){
+        for(Item i : cart)
             items += i + "\n";
-        }
-        if(shippingCharge == 0){
+        if(shippingCharge == 0)
             shipString = "Free Shipping";
-        }
-        else {
+        else
             shipString = shippingCharge.toString();
-        }
-
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return "Ship to \n"
                 + name + '\n' +
@@ -43,9 +39,8 @@ public class Invoice{
                 + city + ' ' +
                  State + ' ' +
                  zipCode +" \n" +'\n' + "Items \n" +"------- \n"+
-                items +'\n' + "Shipping: " + shipString + "\n" + '\n' + "Total cost \n" + "--------- \n"
-                + currency.format(sum) + "\n"
-
-                ;
+                items +'\n' + "Shipping: " + shipString + "\n" + '\n' +
+                "Total cost \n" + "--------- \n"
+                + currency.format(sum) + "\n";
     }
 }
