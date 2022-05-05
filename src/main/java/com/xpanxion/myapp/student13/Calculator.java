@@ -15,7 +15,7 @@ public class Calculator implements Calculatable{
         this.number1 = number1;
         this.number2 = number2;
     }
-    //
+    // Methods
     public Integer add(Integer number1, Integer number2) {
         var calculate = number1 + number2;
         String addExp = number1 + "+" + number2 + "=" + calculate;
@@ -43,6 +43,7 @@ public class Calculator implements Calculatable{
         this.addHistory.add(addExp);
         return calculate;
     }
+
 
     public ArrayList<String> getHistory() {
         return addHistory;
