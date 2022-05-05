@@ -5,12 +5,12 @@ public class Main {
         //ex1();
         // ex2();
         // ex3();
-        ex4();
-        // ex5();
+//        ex4();
+         ex5();
     }
 
     private static void ex4() {
-        var calculator =  new Calculator(0,0);
+        var calculator =  new Calculator();
         var result1 = calculator.add(1, 2);
         var result2 = calculator.subtract(4, 2);
         var result3 = calculator.divide(10, 5);
@@ -39,6 +39,14 @@ public class Main {
 
         System.out.println("Person count: " + Person.getPersonCount());
     }
+
+    private static void ex5() {
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+    }
 }
 //    private static void ex2() {
 //        /* Refactored the person class to extend from the Animal class.
@@ -52,7 +60,5 @@ public class Main {
 ////    }
 //
 //
-////    private static void ex5() {
-////        System.out.println("Todo...");
-////    }
-//
+
+

@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class Calculator implements Calculatable {
     //define attributes
-    Integer num1, num2;
+
   public ArrayList<String> history = new ArrayList<String>();
 
 
 
     //define constructors
-    public Calculator(Integer num1, Integer num2) {
-        this.num1 = num1;
-        this.num2 = num2;
+    public Calculator() {
+
     }
 
     @Override
