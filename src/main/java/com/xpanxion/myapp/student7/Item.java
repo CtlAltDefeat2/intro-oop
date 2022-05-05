@@ -1,5 +1,7 @@
 package com.xpanxion.myapp.student7;
 
+import java.text.NumberFormat;
+
 public class Item {
     protected float price;
     protected int quantity;
@@ -20,12 +22,19 @@ public class Item {
         return price;
     }
 
+    public String getDescription() {
+        return description;
+    }
+    public float getTotal(){
+        return price * quantity;
+    }
+
     @Override
     public String toString() {
-        return "Item{" +
-                "price=" + price +
-                ", quantity=" + quantity +
-                ", description='" + description + '\'' +
-                '}';
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        return
+                description + ' ' +
+                currency.format(price) + ' ' +'('+ quantity +')'+ ' ' +
+                currency.format(getTotal());
     }
 }
