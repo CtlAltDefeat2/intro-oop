@@ -14,7 +14,11 @@ public class Rectangle extends Shape {
         for(int i = 0; i < height; i++) {
             String row = "";
             for(int j = 0; j < width; j++) {
-                row += "*";
+                if ((j > 0 && j < width-1) && (i > 0 && i < height-1)) {
+                    row += " ";
+                } else {
+                    row += "*";
+                }
             }
             System.out.println(row);
         }

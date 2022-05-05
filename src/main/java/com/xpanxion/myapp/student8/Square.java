@@ -13,7 +13,11 @@ public class Square extends Shape {
         for(int i = 0; i < width; i++) {
             String row = "";
             for(int j = 0; j < width; j++) {
-                row += "*";
+                if ((j > 0 && j < width-1) && (i > 0 && i < width - 1)) {
+                    row += " ";
+                } else {
+                    row += "*";
+                }
             }
             System.out.println(row);
         }
