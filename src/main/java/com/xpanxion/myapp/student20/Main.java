@@ -29,10 +29,10 @@ public class Main {
     }
 
     private static void ex3() {
-        var n1 = new Radnumber(4);
-        var n2 = new Radnumber(2);
-        var result1 = Radnumber.add(n1, n2);
-        var result2 = Radnumber.subtract(n1, n2);
+        var n1 = new Anumber(4);
+        var n2 = new Anumber(2);
+        var result1 = Anumber.add(n1, n2);
+        var result2 = Anumber.subtract(n1, n2);
         System.out.println(result1);
         System.out.println(result2);
     }

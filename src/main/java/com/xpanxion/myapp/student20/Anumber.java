@@ -1,6 +1,6 @@
 package com.xpanxion.myapp.student20;
 
-public class Radnumber {
+public class Anumber {
     //
     //Data members
     //
@@ -10,18 +10,19 @@ public class Radnumber {
     // Contractors
     //
 
-    public Radnumber(int number) {
+    public Anumber(int number) {
+
         this.number = number;
     }
-    public Radnumber(){
+    public Anumber(){
 
     }
-    public static int add(Radnumber n1, Radnumber n2) {
+    public static int add(Anumber n1, Anumber n2) {
         int result = n1.number + n2.number;
         return result;
     }
 
-    public static int subtract(Radnumber n1, Radnumber n2) {
+    public static int subtract(Anumber n1, Anumber n2) {
         int result = n1.number - n2.number;
         return result;
     }
