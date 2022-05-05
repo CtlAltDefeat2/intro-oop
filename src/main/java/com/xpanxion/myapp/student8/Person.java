@@ -10,11 +10,13 @@ public class Person extends Animal {
 
 
     public Person() {
+        super();
         counter++;
         type = 1;
     }
 
     public Person(String firstname, String lastname) {
+        super();
         this.firstName = firstname;
         this.lastName = lastname;
         counter++;
@@ -22,9 +24,10 @@ public class Person extends Animal {
     }
 
     public Person(String firstname, String lastname, byte age, int ssn) {
+        super(age);
         this.firstName = firstname;
         this.lastName = lastname;
-        this.Age = age;
+        //this.Age = age;
         this.SSN = ssn;
         counter++;
         type = 3;
