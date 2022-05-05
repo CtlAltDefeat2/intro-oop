@@ -6,8 +6,8 @@ public class Main {
         // ex1();
         // ex2();
         // ex3();
-           ex4();
-        // ex5();
+        //  ex4();
+        ex5();
     }
     /*    private static void ex1() {
             var p1 = new Person();
@@ -35,7 +35,7 @@ public class Main {
         System.out.println("Todo...");*/
 
 
-    private static void ex4() {
+    /*private static void ex4() {
         var calculator = new Calculator();
         var result1 = calculator.add(1, 2);
         var result2 = calculator.subtract(4, 2);
@@ -48,12 +48,41 @@ public class Main {
         System.out.println(result4);
         System.out.println(calculator.getHistory());
 
-        //System.out.println("Todo...");
-    }
+        //System.out.println("Todo...");*/
 
-    //private static void ex5() {
-    // System.out.println("Todo...");
+    private static void ex5() {
+        System.out.println("Exercise 5");
+       // Define variables.
+        var cart = new ShoppingCart();
+        cart.addItem(new Item(2.00F, 4, "Socks"));
+        cart.addItem(new Item(10.00F, 2, "Shirts"));
+        cart.calculateTotal();
+        System.out.println(cart.getTotal());
     }
+}
+/*### Part A
+
+        Create a `ShoppingCart` that can be consumed in the following manner:
+
+      // Define variables.
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+        ```
+
+        The `ShoppingCart` contains a private `ArrayList` of `Items`.  An `Item` has
+        one constructor and has the following parameters:
+
+        - price
+        - quantity
+        - description
+
+        Output
+        ```
+        $28.00
+        ```*/
 
 
 
