@@ -5,7 +5,7 @@ import javax.swing.text.html.HTMLDocument;
 public class Main {
     public static void main(String[] args) {
 
-        ex4();
+        ex5();
     }
 
     private static void ex1() {
@@ -30,6 +30,8 @@ public class Main {
 
     private static void ex2() {
         Dog d1= new Dog("Champion", "champ", "white");
+        Dog d2 = new Dog();
+
     }
 
     private static void ex3() {
@@ -51,6 +53,13 @@ public class Main {
     }
 
     private static void ex5() {
-        System.out.println("Todo...");
+
+        var shoppingcart =new ShoppingCart();
+        shoppingcart.addItem(new Item(20.00F,4,"Shirt"));
+
+
+
+
+
     }
 }
