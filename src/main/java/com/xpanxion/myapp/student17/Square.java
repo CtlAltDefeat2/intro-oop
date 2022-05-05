@@ -1,22 +1,28 @@
 package com.xpanxion.myapp.student17;
 
+import java.awt.*;
+
 public class Square extends Shape {
     //
     //Data memebers
     //
     private int size;
 
+
+
     //
     //Constructors
     //
-    public Square(int size) {
-        this.size = size;
+    public Square(int num){
+    }
+    public int getSize() {
+        return size;
     }
     //
     //Overrides
     //
     @Override
     String draw() {
-        return "Draw square";
+        return null;
     }
 }

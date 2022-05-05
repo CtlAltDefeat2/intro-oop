@@ -44,8 +44,7 @@ public class Calculator implements Calculatable  {
         return sum;
     }
     public String getHistory(){
-        //ArrayList history = new ArrayList<String>();
-        String listString = String.join(",",history);
+        String listString = String.join("",history);
         return listString;
     }
     }

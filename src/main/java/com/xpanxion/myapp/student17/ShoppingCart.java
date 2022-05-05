@@ -47,20 +47,22 @@ public class ShoppingCart {
     }
     public String shipping() {
         if (total >= 10) {
-            return "5.00";
+            return "$5.00";
         } else {
             return "Free";
         }
     }
     public String shipOrder(String name, String address, String city, String state, int zipCode) {
+        NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
+        String s = n.format(total);
         return "Ship to:" + "\n\t" + name + "\n\t" + address + "\n\t" + city + ", " + state + " " + zipCode +
-               "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: " + shipping() + "\n\nTotal Cost\n-------\n" + total;
+               "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: " + shipping() + "\n\nTotal Cost\n-------\n" + s;
     }
     public String listDesc() {
         for (int i = 0; i < item.size(); i++) {
             listFiller();
-            return description.get(i) + "\t" + price.get(i) + "\t(" + quantity.get(i) + ")\t" + itemList.get(i) + "\n"
-                   +description.get(i + 1) + " " + price.get(i + 1) + "\t(" + quantity.get(i + 1) + ")\t" + itemList.get(i+1);
+            return description.get(i) + "\t" + price.get(i) + "\t(" + quantity.get(i) + ")\t" + "$" +itemList.get(i) + "\n"
+                   +description.get(i + 1) + " " + price.get(i + 1) + "\t(" + quantity.get(i + 1) + ")\t" + "$" + itemList.get(i+1);
         }
         return null;
     }
