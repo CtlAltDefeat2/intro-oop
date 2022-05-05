@@ -12,7 +12,7 @@ public class ShoppingCart {
         this.shipping = shipping;
     }
 
-    public void addItem(Item s) {
+    public void addItem(Item s){
          shoppingcart.add(s);
     }
 
@@ -20,11 +20,17 @@ public class ShoppingCart {
         float totalPrice;
         float total = 0.0F;
         Item item;
+        float tax = 0.0F;
 
         for (int i =0; i< shoppingcart.size(); i++) {
             item = (Item) shoppingcart.get(i);
             totalPrice = item.getPrice()* item.getQuantity();
-            total+=totalPrice;
+            tax = totalPrice * 0.1F;
+            totalPrice += tax;
+            if(totalPrice > 10.00){
+                totalPrice += shipping;
+            }
+            total += totalPrice;
         }
         return total;
     }
