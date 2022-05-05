@@ -9,6 +9,6 @@ public class Square extends Shape {
     }
     @Override
     String draw() {
-        return "Draw Square";
+        return "*  *  *\n*     *\n*  *  *\n";
     }
 }

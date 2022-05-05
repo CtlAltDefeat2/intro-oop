@@ -11,6 +11,6 @@ public class Rectangle extends Shape {
     }
     @Override
     String draw() {
-        return "Draw Rectangle";
+        return "**********\n*        *\n**********";
     }
 }
