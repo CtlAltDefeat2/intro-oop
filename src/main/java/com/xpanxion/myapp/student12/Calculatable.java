@@ -8,6 +8,6 @@ public interface Calculatable {
     Integer multiply(Integer numberX, Integer numberY);
     Integer divide(Integer numberX, Integer numberY);
 
-    ArrayList<String> getHistory();
+    String getHistory();
 
 }

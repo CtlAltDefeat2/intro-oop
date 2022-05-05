@@ -2,7 +2,7 @@ package com.xpanxion.myapp.student12;
 
 import java.util.ArrayList;
 
-public class Item extends ShoppingCart{
+public class Item {
     //
     //Data Members
     //

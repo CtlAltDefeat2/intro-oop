@@ -68,13 +68,14 @@ implements Calculatable {
         else {
             int result = numberX / numberY;
             String ratio = "\n" + numberX + " / " + numberY + " = " + result;
-            this.getHistory().add(ratio);
+            this.history.add(ratio);
             return result;
         }
     }
 
-    public ArrayList getHistory(){
+    public String getHistory(){
         //ArrayList history = new ArrayList<String>();
-        return history;
+        String listString = String.join(",",history);
+        return listString;
     }
 }

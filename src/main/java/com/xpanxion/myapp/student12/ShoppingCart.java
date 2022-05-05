@@ -1,7 +1,9 @@
 package com.xpanxion.myapp.student12;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.Locale;
 
 public class ShoppingCart {
     //
@@ -64,14 +66,11 @@ public class ShoppingCart {
             Item item2 = iterator1.next();
             this.total = this.total + (item2.getPrice() * item2.getQuantity());
             taxedTotal = (float) ((total + shipFee) * 1.1);
-
-
         }
 
     }
 
     public float shipping() {
-
         if (total >= 10) {
             return this.shipFee = 0 + getTotal();
         } else {
@@ -89,15 +88,15 @@ public class ShoppingCart {
 
 
         return "Ship to:" + "\n\t" + name + "\n\t" + address + "\n\t" + city + ", " + state + " " + zipCode +
-                "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: " + shipFee + "\n\nTotal Cost\n-------\n" + total;
+                "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: " + moneyChanger(shipFee) + "\n\nTotal Cost\n----------\n" + moneyChanger(total) + " (Plus taxes and fees)";
     }
 
     public String listDesc() {
 
         for (int i = 0; i < item.size(); i++) {
             listFiller();
-            return description.get(i) + "\t" + price.get(i) + "\t(" + quantity.get(i) + ")\t" +  itemTotalList.get(i) +  "\n"
-                    +description.get(i + 1) + " " + price.get(i + 1) + "\t(" + quantity.get(i + 1) + ")\t" + itemTotalList.get(i+1);
+            return description.get(i) + "\t" + moneyChanger(price.get(i)) + "\t(" + quantity.get(i) + ")\t" +  itemTotalList.get(i) +  "\n"
+                    +description.get(i + 1) + " " + moneyChanger(price.get(i+1)) + "\t(" + quantity.get(i + 1) + ")\t" + itemTotalList.get(i+1);
         }
         return null;
     }
@@ -116,10 +115,16 @@ public class ShoppingCart {
                 quantity.add(item2.getQuantity());
                 //this.quantity = quantity;
                 itemTotal = quantity.get(i) * price.get(i);
-                this.itemTotalList.add(itemTotal);
+                var itemPrice = moneyChanger(itemTotal);
+                this.itemTotalList.add(itemPrice);
 
             }
         }
+    }
+    public String moneyChanger(float number){
+        NumberFormat n = NumberFormat.getCurrencyInstance(Locale.US);
+        String s = n.format(number);
+        return s;
     }
 
     @Override

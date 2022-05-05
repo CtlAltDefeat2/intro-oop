@@ -57,6 +57,7 @@ public class Main {
     }
 
     private static void ex5() {
+        System.out.println("Ex 5.)");
         var shoppingCart = new ShoppingCart();
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
