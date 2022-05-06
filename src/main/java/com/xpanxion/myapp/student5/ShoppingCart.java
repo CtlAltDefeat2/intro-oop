@@ -62,7 +62,7 @@ public class ShoppingCart {
         this.zipCode = zipCode;
         return "Ship to:" + "\n\t" + customerName + "\n\t" + streetAddress + "\n\t" + city + ", " + state + " " + zipCode +
                 "\n\nItems\n-----\n" + listDesc() + "\n\nTaxes:    " + totalTax + "\nShipping: " + shippingFee +
-                "\n\nTotal Cost\n----------\n" + totalCost;
+                "\n\nTotal Cost\n----------\n$" + totalCost + "0";
     }
     public String listDesc() {
         for (int i = 0; i < itemsList.size(); i++) {
