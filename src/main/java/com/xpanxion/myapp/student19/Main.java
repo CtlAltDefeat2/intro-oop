@@ -9,7 +9,8 @@ public class Main {
       //ex3();
       // ex4();
        //ex5();
-        ex6();
+        //ex6();
+       ex7();
     }
     private static void ex1(){
       //  var p1 = new Person();
@@ -69,8 +70,16 @@ public class Main {
        shapes.add(new Square(3));
         shapes.add(new Rectangle(10, 3));
         for (Shape s : shapes) {
-         s.draw();
+            System.out.println(s.draw());
         }
+    }
+    //ex7 Model a domain of your choice similar to the exercises above.
+    private static void ex7(){
+    var footballField = new Footballfield();
+        //System.out.println(Footballfield.isAvailable("Fellowship", 0.0));
+        //System.out.println(Footballfield.makeReservation("Fellowship", 0.0));
+       // System.out.println(Footballfield.cancelReservation("Fellowship", 0.0));
+
 
     }
 }

@@ -3,33 +3,25 @@ package com.xpanxion.myapp.student19;
 public class Square extends Shape {
     //Data members
     private int size;
-
+    private String s = new String();
     //Constructor
     public Square(int size) {
         this.size = size;
     }
-
     @Override
-   public void draw() {
-
+   public String draw() {
         for (int i = 0; i < size; i++) {
-            System.out.print("*");
+           s = s + "*";
         }
-
-        System.out.print( '\n' + "*");
-
+        s = s + '\n' + "*";
         for (int i = 1; i < (size - 1); i++) {
-            System.out.print(" ");
+            s = s + " ";
         }
-
-        System.out.print( "*" +'\n');
-
+        s = s + "*" +'\n';
         for (int i = 0; i < size; i++) {
-            System.out.print("*");
+            s = s + "*";
         }
-        System.out.println(" ");
-        return;
+        s = s + " ";
+        return s;
     }
-
-
 }
