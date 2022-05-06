@@ -3,7 +3,7 @@ package com.xpanxion.myapp.student22;
 import java.util.ArrayList;
 
 public class Calculator implements Calculatable{
-    private ArrayList history = new ArrayList<String>();
+    ArrayList<String> history = new ArrayList<String>();
     @Override
     public Integer add(Integer number1, Integer number2) {
         int sum = number1 + number2;
@@ -15,7 +15,7 @@ public class Calculator implements Calculatable{
     @Override
     public Integer subtract(Integer number1, Integer number2) {
         int sum = number1 - number2;
-        String histories = "\n" + number1 +" -" + number2 +" =" + sum;
+        String histories = number1 +" -" + number2 +" =" + sum;
         this.history.add(histories);
         return sum;
     }
@@ -23,7 +23,7 @@ public class Calculator implements Calculatable{
     @Override
     public Integer multiply(Integer number1, Integer number2) {
         int sum = number1 * number2;
-        String histories ="\n" + number1 +" *" + number2 +" =" + sum;
+        String histories = number1 +" *" + number2 +" =" + sum;
         this.history.add(histories);
         return sum;
     }
@@ -31,15 +31,19 @@ public class Calculator implements Calculatable{
     @Override
     public Integer divide(Integer number1, Integer number2) {
         int sum = number1 / number2;
-        String histories ="\n" + number1 +" /" + number2 +" =" + sum;
+        String histories = number1 +" /" + number2 +" =" + sum;
         this.history.add(histories);
         return sum;
     }
 
     @Override
-    public ArrayList<String> getHistory() {
+    public String getHistory() {
+        String retVal = "";
+        for (String i : history){
+            System.out.println(i);
+        }
 
-
-        return history;
+        return retVal;
     }
+
 }
