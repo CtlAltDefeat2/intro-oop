@@ -5,10 +5,10 @@ import java.util.concurrent.atomic.AtomicStampedReference;
 public class Main {
     public static void main(String[] args) {
         //ex1();
-        // ex2();
-         //ex3();
-        ex4();
-        // ex5();
+        //ex2();
+        //ex3();
+        //ex4();
+        ex5();
     }
 
     private static void ex1() {
@@ -30,22 +30,36 @@ public class Main {
 //        System.out.println("Todo...");
 //
     }
-        private static void ex4() {
+    private static void ex3() {
 
-            var calculator = new Calculator();
-            var result1 = calculator.add(1, 2);
-            var result2 = calculator.subtract(4, 2);
-            var result3 = calculator.divide(10, 5);
-            var result4 = calculator.multiply(2, 2);
-//
-            System.out.println(result1);
-            System.out.println(result2);
-            System.out.println(result3);
-            System.out.println(result4);
-            System.out.println(calculator.getHistory());
     }
-        }
 
-        //private static void ex5() {
-        //  System.out.println("Todo...");
-        //}
+    private static void ex4() {
+
+        var calculator = new Calculator();
+        var result1 = calculator.add(1, 2);
+        var result2 = calculator.subtract(4, 2);
+        var result3 = calculator.divide(10, 5);
+        var result4 = calculator.multiply(2, 2);
+//
+        System.out.println(result1);
+        System.out.println(result2);
+        System.out.println(result3);
+        System.out.println(result4);
+        System.out.println(calculator.getHistory());
+    }
+
+
+    private static void ex5() {
+        System.out.println("Todo...");
+        var shoppingCart = new ShoppingCart();
+shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+shoppingCart.calculateTotal();
+System.out.println(shoppingCart.getTotal());
+
+    }
+
+
+
+}

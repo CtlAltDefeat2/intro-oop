@@ -64,8 +64,7 @@ public class Person extends Animal {
         String retVal = "";
         if (firstName == null) {
             retVal = "N/A";
-        }
-        else if (ssn == null) {
+        } else if (ssn == null) {
             retVal = firstName + " " + lastName;
         }
         if (ssn != null) {

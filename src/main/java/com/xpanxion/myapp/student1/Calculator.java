@@ -49,7 +49,7 @@ public class Calculator implements Calculatable {
         return multiplication;
     }
 
-    @Override
+   @Override
     public Integer divide(Integer number1, Integer number2) {
         int division = 0;
         division = number1 / number2;
