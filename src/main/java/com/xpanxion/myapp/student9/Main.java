@@ -52,39 +52,17 @@ public class Main {
 
     private static void ex5() {
         System.out.println("Exercise 5");
-       // Define variables.
+        // Define variables.
         var cart = new ShoppingCart();
         cart.addItem(new Item(2.00F, 4, "Socks"));
         cart.addItem(new Item(10.00F, 2, "Shirts"));
         cart.calculateTotal();
         System.out.println(cart.getTotal());
+
+        var invoice = cart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
     }
 }
-/*### Part A
-
-        Create a `ShoppingCart` that can be consumed in the following manner:
-
-      // Define variables.
-        var shoppingCart = new ShoppingCart();
-        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
-        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
-        shoppingCart.calculateTotal();
-        System.out.println(shoppingCart.getTotal());
-        ```
-
-        The `ShoppingCart` contains a private `ArrayList` of `Items`.  An `Item` has
-        one constructor and has the following parameters:
-
-        - price
-        - quantity
-        - description
-
-        Output
-        ```
-        $28.00
-        ```*/
-
-
 
 
 

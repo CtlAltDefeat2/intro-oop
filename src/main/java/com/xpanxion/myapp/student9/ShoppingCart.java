@@ -12,6 +12,8 @@ public class ShoppingCart {  // base class
     private ArrayList<Item> itemsList;
     private float salesTax;
     private float afterTax;
+    private Invoice invoice;
+
 
     // CONSTRUCTORS
 
@@ -19,7 +21,7 @@ public class ShoppingCart {  // base class
         this.itemsList = new ArrayList<Item>();
         this.total = total;
         this.salesTax = 0.1f;
-        this.afterTax= afterTax;
+        this.afterTax = afterTax;
     }
 
     public ShoppingCart(Float price, Integer quantity, String description, Float total) {
@@ -50,12 +52,16 @@ public class ShoppingCart {  // base class
             total = total;
         }
         total += (total * salesTax);
-    }
-    public float getTotal() {  // Accessors = getter
 
+    }
+
+    public float getTotal() {  //Accessors = getter
         return total;
+    }
+        public Invoice shipOrder(String name, String streetAddress, String city, String state, int zipCode){
+        var invoice = new Invoice(name, streetAddress ,city ,state , zipCode );
+        return invoice;
 
     }
-    // private void itemsList() {
-    // }
+
 }
