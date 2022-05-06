@@ -2,12 +2,12 @@ package com.xpanxion.myapp.student11;
 
 public class Main {
     public static void main(String[] args) {
-            //ex1();
-            //ex2();
-            //ex3();
-            //ex4();
-              ex5();
-   }
+        //ex1();
+        //ex2();
+        //ex3();
+        //ex4();
+        //ex5();
+    }
 //            private static void ex1() {
 //            var p1 = new Person();
 //            var p2 = new Person("Jon", "Smith");
@@ -55,10 +55,17 @@ public class Main {
 
 //    System.out.println("Todo...");
 
-          private static void ex5() {
-            var shoppingCart = new ShoppingCart();
-            shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
-            shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
-            shoppingCart.calculateTotal();
-            System.out.println(shoppingCart.getTotal());
-   }}
+    private static void ex5() {
+        var shoppingCart = new ShoppingCart();
+        var item = new Item(2.00f, 4, "Socks");
+        shoppingCart.addItem(item);
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+        System.out.println("Ship to:");
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
+
+    }
+}
+
