@@ -25,23 +25,26 @@ public class Invoice {
         this.items = items;
         this.totalAfterTax = totalAfterTax;
         this.ship = ship;
-
             }
-
     @Override
     public String toString() {
        for (int i = 0; i < items.size(); i++) {
            item1 = items.get(i);
            itemList += item1;
-        }
-        return "Ship to:" + '\n' +
-                name + '\n' +
-                 street + '\n' +
-               city + " " +state + " " + zip + '\n' + "Items" + '\n' +
-               itemList + '\n' +
-                ship + '\n' +
-                totalAfterTax;
-    }
+           String shippingString = "";
+           if (ship == 0) {
+               shippingString = "Free shipping";
+           }
+       }
+           return "Ship to:" + '\n' +
+                   name + '\n' +
+                   street + '\n' +
+                   city + " " + state + " " + zip + '\n' + "Items" + '\n' +
+                   itemList + '\n' +
+                   ship + '\n' +
+                   totalAfterTax;
+       }
+
 }
 
 
