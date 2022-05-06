@@ -9,10 +9,10 @@ public class Animal {
     public byte getAge() {
         return age;
     }
-
     public void setAge(byte age) {
         this.age = age;
     }
+
 }
 
 

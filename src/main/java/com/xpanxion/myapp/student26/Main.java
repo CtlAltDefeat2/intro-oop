@@ -54,8 +54,14 @@ public class Main {
 
     private static void ex5() {
 
-        var shoppingcart =new ShoppingCart();
-        shoppingcart.addItem(new Item(20.00F,4,"Shirt"));
+        var shoppingCart = new ShoppingCart();
+        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
+        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
+        shoppingCart.calculateTotal();
+        System.out.println(shoppingCart.getTotal());
+
+
+
 
 
 

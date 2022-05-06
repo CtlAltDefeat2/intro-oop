@@ -7,16 +7,13 @@ public class Calculator implements Calculatable {
 
     private ArrayList history = new ArrayList<String>();
 
-   Calculator(){}
+    Calculator(){}
     @Override
     public Integer add(Integer number1, Integer number2) {
         int sum =number1+number2;
-
-       String histories = number1 +  "+" + number2 + "=" + sum;
-
-       this.history.add(histories);
-       return sum;
-
+        String histories = number1 +  "+" + number2 + "=" + sum;
+        this.history.add(histories);
+        return sum;
     }
 
     @Override
@@ -24,19 +21,16 @@ public class Calculator implements Calculatable {
 
         int sum = number1-number2;
         String histories = "\n"+ number1 + "-" + number2 + "=" + sum;
-       this.history.add(histories);
-
+        this.history.add(histories);
         return sum;
-
-
     }
 
     @Override
     public Integer multiply(Integer number1, Integer number2) {
-       int sum = number1 * number2;
-       String histories = "\n" + number1 + "*" + number2 + "=" + sum;
-       this.history.add(histories);
-       return sum;
+        int sum = number1 * number2;
+        String histories = "\n" + number1 + "*" + number2 + "=" + sum;
+        this.history.add(histories);
+        return sum;
     }
 
     @Override
@@ -49,8 +43,6 @@ public class Calculator implements Calculatable {
 
     @Override
     public ArrayList<String> getHistory() {
-
-
-       return history;
+        return history;
     }
 }

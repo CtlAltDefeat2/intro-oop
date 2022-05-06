@@ -46,7 +46,7 @@ public class Person extends Animal {
 
     private String lastFour(Integer SSN) {
 
-            return Integer.toString(SSN).substring(5);
+        return Integer.toString(SSN).substring(5);
 
     }
 
