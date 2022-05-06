@@ -59,6 +59,8 @@ public class Main {
         var shapes = new ArrayList<Shape>();
         shapes.add(new Square(3));
         shapes.add(new Rectangle(10,3));
+        shapes.add(new Triangle(8));
+        shapes.add(new Circle(6));
         for (Shape s : shapes) {
             System.out.println(s.draw());
         }

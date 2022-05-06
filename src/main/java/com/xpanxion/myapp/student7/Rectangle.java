@@ -9,7 +9,6 @@ public class Rectangle extends Shape{
         this.width = width;
         this.length = length;
     }
-
     @Override
     String draw() {
         String rectStar ="";
