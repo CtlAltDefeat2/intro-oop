@@ -23,7 +23,6 @@ public class Rectangle extends Shape {
         int j = 0;
         String result = "";
         for (i = 1; i <= length; i++) {
-            ArrayList rowList = new ArrayList();
             for (j = 0; j < width; j++) {
                 if (i == 1 || i == length || j == 0 || j == width - 1) {
                     result += "*";

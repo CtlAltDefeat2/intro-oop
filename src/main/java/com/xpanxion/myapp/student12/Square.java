@@ -30,7 +30,7 @@ public class Square extends Shape{
         int j = 0;
         String result = "";
         for (i = 1; i <= size; i++) {
-            ArrayList rowList = new ArrayList();
+
             for (j = 0; j < size; j++) {
                 if( i == 1 || i == size || j == 0 || j == size - 1) {
                     result += "*";
