@@ -9,8 +9,8 @@ public class Main {
         //ex3();
         //ex4();
         //ex5();
-        ex6();
-        //ex7();
+        //ex6();
+        ex7();
     }
 
     private static void ex1() {
@@ -71,6 +71,7 @@ public class Main {
     }
 
     private static void ex7() {
-
+        Word w = new Word("Hotdog");
+        w.printWord();
     }
 }
