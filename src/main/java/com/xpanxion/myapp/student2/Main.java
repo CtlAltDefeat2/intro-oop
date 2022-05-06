@@ -76,4 +76,7 @@ public class Main {
             System.out.println(s.draw());
         }
     }
+    private static void ex7(){
+        System.out.println("check out the pacman game that i made coding along with a video at my pacman repo: https://github.com/greebt01/pacman-game");
+    }
 }
