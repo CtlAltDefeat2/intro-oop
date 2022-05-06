@@ -7,11 +7,11 @@ public class Game implements Printable {
     public static void runGame() {
 
         boolean userWantsToExit = false;       // flag variable to exit menu while loop
-        boolean isGuessCorrect = false;        // flag variable to complete the game while loop
-        int numToGuess = 0;                    // the number the computer generates
-        int numEntered = 0;                    // the number the player enters as a guess
-        int numAttempts = 1;                   // the number of attempts it takes to win the game
-        int menuChoice = 0;                    // the game menu choice of the player
+        boolean isGuessCorrect;        // flag variable to complete the game while loop
+        int numToGuess;                    // the number the computer generates
+        int numEntered;                    // the number the player enters as a guess
+        int numAttempts;                   // the number of attempts it takes to win the game
+        int menuChoice;                    // the game menu choice of the player
         Scanner menuChoiceReader = new Scanner(System.in);
 
         programIntro();

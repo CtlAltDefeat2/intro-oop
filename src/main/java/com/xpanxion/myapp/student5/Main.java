@@ -1,17 +1,16 @@
 package com.xpanxion.myapp.student5;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        // ex1();
+        ex1();
         // ex2();
         // ex3();
         // ex4();
         // ex5();
         // ex6();
-        ex7();
+        // ex7();
     }
     private static void ex1() {
         var p1 = new Person();
@@ -78,5 +77,6 @@ public class Main {
 
     private static void ex7() {
         Game.runGame();
+        //  When running, the cmd window should be made pretty large for this exercise.
     }
 }
