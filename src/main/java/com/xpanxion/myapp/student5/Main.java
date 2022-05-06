@@ -10,8 +10,8 @@ public class Main {
         // ex3();
         // ex4();
         // ex5();
-        ex6();
-        // ex7();
+        // ex6();
+        ex7();
     }
     private static void ex1() {
         var p1 = new Person();

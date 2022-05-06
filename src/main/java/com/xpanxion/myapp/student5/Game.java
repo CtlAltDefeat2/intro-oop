@@ -2,16 +2,19 @@ package com.xpanxion.myapp.student5;
 
 import java.util.*;
 
-public class Game {
+public class Game implements Printable {
+    // Main Game Method
     public static void runGame() {
 
-        boolean userWantsToExit = false;        // flag variable to exit menu while loop
+        boolean userWantsToExit = false;       // flag variable to exit menu while loop
         boolean isGuessCorrect = false;        // flag variable to complete the game while loop
         int numToGuess = 0;                    // the number the computer generates
         int numEntered = 0;                    // the number the player enters as a guess
-        int numAttempts = 1;                // the number of attempts it takes to win the game
+        int numAttempts = 1;                   // the number of attempts it takes to win the game
         int menuChoice = 0;                    // the game menu choice of the player
         Scanner menuChoiceReader = new Scanner(System.in);
+
+        programIntro();
 
         while (!userWantsToExit) {
             displayMenu(); // function that displays the program menu
@@ -19,9 +22,10 @@ public class Game {
             System.out.println("Please select an option from the menu: ");
             menuChoice = menuChoiceReader.nextInt();
 
-            isGuessCorrect = false;			// to allow for multiple games
-            numAttempts = 0;				// to reset attempts for additional games
+            clearScreen();
 
+            isGuessCorrect = false;			   // to allow for multiple games
+            numAttempts = 0;			   	   // to reset attempts for additional games
 
             Random rand = new Random();
             numToGuess = rand.nextInt(0, 201);  // generates a number between and including 0 and 200
@@ -72,9 +76,14 @@ public class Game {
             }
         } // end of while loop 1
     }
-    public static void screenClear() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
+    // Other Methods
+    public static void clearScreen() {
+        for (int clearScreen = 0; clearScreen < 30; ++clearScreen) System.out.println(" "); // simulates clear screen
+    }
+    public static void pause() {
+        Scanner pauseKey = new Scanner(System.in);
+        System.out.println("(type any letter, then press enter)");
+        pauseKey.next();
     }
     public static void displayMenu() {
         System.out.println("\nGame Menu:\n");
@@ -83,6 +92,7 @@ public class Game {
         System.out.println("3 - Exit the Game\n");
     } // end of displayMenu
     public static void programEnding() {
+        clearScreen();
         System.out.println("                         ` `oddy+.                                    ");
         System.out.println("                        ` -mhdNNNNh:      -yhNNmh+`                   ");
         System.out.println("                       ` `NhsNNNNNNNd.   odomNNNNNN/  `               ");
@@ -110,4 +120,61 @@ public class Game {
         System.out.println("                               .:+syhdddddhyso/-`   `       GO PSU!!\n");
         System.out.println("Thank you for playing!  Have a nice day!!\n");
     }
+    public static void programIntro() {
+        System.out.println("                    WW       WW EEEEEEE LL      CCCCC   OOOOO   MMM     MMM EEEEEE  ");
+        System.out.println("                    WW       WW EE      LL     CC      OO   OO  MM M   M MM EE      ");
+        System.out.println("                    WW   W   WW EEEEE   LL    CC      OO     OO MM  M M  MM EEEEE   ");
+        System.out.println("                     WW W W WW  EE      LL     CC      OO   OO  MM   M   MM EE      ");
+        System.out.println("                      WW   WW   EEEEEEE LLLLLL  CCCCC   OOOOO   MM       MM EEEEEE  \n");
+        System.out.println("                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        System.out.println("                  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n");
+
+        pause();
+        clearScreen();
+
+        System.out.println("                                          TTTTTTTT   OOOOO  ");
+        System.out.println("                                             TT     OO   OO ");
+        System.out.println("                                             TT    OO     OO");
+        System.out.println("                                             TT     OO   OO ");
+        System.out.println("                                             TT      OOOOO  \n");
+        System.out.println("                                        XXXXXXXXXXXXXXXXXXXXXX ");
+        System.out.println("                                        XXXXXXXXXXXXXXXXXXXXXX \n");
+
+        pause();
+        clearScreen();
+
+        System.out.println("                      :hhddd+        .hhhddy                    `-+sydmmNNNNmdhyo/-`               ");
+        System.out.println("                      yddddd.        oddddd:                 .+dMMMMMMMMMMMMMMMMMMMMdo.            ");
+        System.out.println("                     :dddddo        `dddddh                .yMMMMMMMMMMMMMMMMMMMMMMMMMMh-          ");
+        System.out.println("                     yddddd.        +ddddd/               +NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMs         ");
+        System.out.println("                    -ddddds        `dddddd`              oMMMMMMMMMMMNmhsssydNMMMMMMMMMMMMs        ");
+        System.out.println("           .::::::::ydddddo::::::::odddddy::::::        -MMMMMMMMMMNs-       `:dMMMMMMMMMMM:       ");
+        System.out.println("           sdddddddddddddddddddddddddddddddddddd        oMMMMMMMMMM:           `dMMMMMMMMMMs       ");
+        System.out.println("           sdddddddddddddddddddddddddddddddddddd        yMMMMMMMMMh             sMMMMMMMMMMo       ");
+        System.out.println("           :++++++smmmmmyooo+++++smmmmmd++++++++        :oooooooo+-            .mMMMMMMMMMN.       ");
+        System.out.println("                  ymmmmm-        +mmmmm+                                      :dMMMMMMMMMN+        ");
+        System.out.println("                 -mmmmmy        `dmmmmd`                                   ./hMMMMMMMMMMd:         ");
+        System.out.println("                 ymmmmm-        +mmmmmo                                 `:ymMMMMMMMMMMd+`          ");
+        System.out.println("                -mmmmmy        `dmmmmm.                                :dMMMMMMMMMMdo-`            ");
+        System.out.println("        ++++++++hmmmmms++++++++smmmmmd++++++:                         oMMMMMMMMMms-`               ");
+        System.out.println("        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms                        .MMMMMMMMMo`                  ");
+        System.out.println("        mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms                        /MMMMMMMMy                    ");
+        System.out.println("        //////ommmmmd/////////dmmmmm////////-                        :yyyyysss-                    ");
+        System.out.println("              smmmmm+        -mmmmms                                                               ");
+        System.out.println("             `mmmmmd`        ymmmmm-                                  `/osso/`                     ");
+        System.out.println("             ommmmm+        -mmmmmy                                  +NMMMMMMN+                    ");
+        System.out.println("            `dmmmmm`        ymmmmm-                                  hMMMMMMMMy                    ");
+        System.out.println("            /mmmmd+        .mmmmdy                                   `+dNMMNh+`                  \n");
+
+        System.out.println("NNN    NN UU   UU MMM     MMM BBBB   EEEEEE RRRR        GGGGG UU   UU EEEEEE  SSS  SSS EEEEEE RRRR  ");
+        System.out.println("NN N   NN UU   UU MM M   M MM BB  B  EE     RR  R      GG     UU   UU EE     SS   SS   EE     RR  R ");
+        System.out.println("NN  N  NN UU   UU MM  M M  MM BBBBB  EEEEE  RRRR   ** GG   GG UU   UU EEEEE   SS   SS  EEEEE  RRRR  ");
+        System.out.println("NN   N NN  U   U  MM   M   MM BB   B EE     RR  R      GG   G  U   U  EE       SS   SS EE     RR  R ");
+        System.out.println("NN    NNN   UUU   MM       MM BBBBB  EEEEEE RR   R      GGGGG   UUU   EEEEEE SSS  SSS  EEEEEE RR   R\n");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        System.out.println("                                                           Program Created By: Connor David Shillady");
+        System.out.println("                                                      Student of Penn State University, Berks Campus");
+        pause();
+    } // end of programIntro
 }
