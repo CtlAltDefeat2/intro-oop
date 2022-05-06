@@ -1,13 +1,15 @@
 package com.xpanxion.myapp.student12;
 
-public class Rectangle extends Shape{
+import java.util.ArrayList;
+
+public class Rectangle extends Shape {
     private int length;
     private int width;
 
     //
     //Constructors
     //
-    Rectangle(int length, int width){
+    Rectangle(int width, int length) {
         this.length = length;
         this.width = width;
     }
@@ -16,12 +18,27 @@ public class Rectangle extends Shape{
     //Overrides
     //
     @Override
-    String draw(){
-        return ("Draw rectangle");
+    String draw() {
+        int i = 0;
+        int j = 0;
+        String result = "";
+        for (i = 1; i <= length; i++) {
+            ArrayList rowList = new ArrayList();
+            for (j = 0; j < width; j++) {
+                if (i == 1 || i == length || j == 0 || j == width - 1) {
+                    result += "*";
+                } else {
+                    result += " ";
+                }
+            }
+            result += "\n";
+        }
+        return result;
     }
 
+
     @Override
-    Shape add(Shape rectangle){
+    Shape add(Shape rectangle) {
         this.shapes.add(rectangle);
         return rectangle;
     }

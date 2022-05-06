@@ -7,7 +7,7 @@ public class Square extends Shape{
     //Data Members
     //
     private int size;
-    private ArrayList<String> sizeList;
+    private ArrayList<ArrayList<String>> sizeList = new ArrayList<>();
 
 
     //
@@ -25,9 +25,23 @@ public class Square extends Shape{
     //Overrides
     //
     @Override
-    String draw(){
-        String listString = String.join(", ", sizeList);
-        return listString;
+    String draw() {
+        int i = 0;
+        int j = 0;
+        String result = "";
+        for (i = 1; i <= size; i++) {
+            ArrayList rowList = new ArrayList();
+            for (j = 0; j < size; j++) {
+                if( i == 1 || i == size || j == 0 || j == size - 1) {
+                    result += "*";
+                }
+                else{
+                    result += " ";
+                }
+            }
+            result += "\n";
+        }
+        return result;
     }
 
     Shape add(Shape square){
@@ -38,18 +52,8 @@ public class Square extends Shape{
     //
     //Methods
     //
-    private ArrayList buildList(){
-        ArrayList sizeList = new ArrayList();
-        for (int i = 0; i < sizeList.size() ; i++){
-            sizeList.add("*");
-        }
-        this.sizeList = sizeList;
-        return sizeList;
+    private void buildList(ArrayList sizeList) {
     }
-
-
-
-
 
 
 
