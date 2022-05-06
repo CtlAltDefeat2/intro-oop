@@ -4,6 +4,7 @@ public class  ShoppingCart {
     private ArrayList<Item> arrayList;
     private float total = 0;
     private float shippingCharge;
+    private String name;
     private String address;
     private String city;
     private String state;
@@ -15,10 +16,10 @@ public class  ShoppingCart {
     public ShoppingCart(float shippingCharge) {
         this.shippingCharge = shippingCharge;
     }
-    public void addItem(Item i) {
-        arrayList.add(i);
-    }
-    public void calculateTotal() {
+        public void addItem(Item i) {
+            arrayList.add(i);
+        }
+        public void calculateTotal() {
         for ( int i = 0; i < arrayList.size( ); i++){
             total = total + ((arrayList.get(i).getPrice() * arrayList.get(i).getQuantity()));
             // by adding the total + you are telling the for loop to keep the socks at $8 then to

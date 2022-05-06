@@ -3,7 +3,7 @@ package com.xpanxion.myapp.student16;
 import java.util.ArrayList;
 
 public class Invoice {
-    private  String name;
+    public  String name;
     private String address;
     private String city;
     private String state;
@@ -53,7 +53,7 @@ public class Invoice {
         ---------
                 */
 
-
+        //this is a for/each statement.
         float ShoppingCart = 0;
         String item = "";
         for (Item i:items) {
