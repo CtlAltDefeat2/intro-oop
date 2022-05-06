@@ -2,7 +2,7 @@ package com.xpanxion.myapp.student13;
 
 public class Animal {
 
-    private byte age;
+    protected byte age;
 
     Animal() {
     }

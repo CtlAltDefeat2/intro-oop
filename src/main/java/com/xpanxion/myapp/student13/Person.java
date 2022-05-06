@@ -26,7 +26,6 @@ public class Person extends Animal{
         super(age);
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
         this.ssn = ssn;
         this.countPerson++;
     }

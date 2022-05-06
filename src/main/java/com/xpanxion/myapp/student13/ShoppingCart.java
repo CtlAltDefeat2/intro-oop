@@ -1,7 +1,10 @@
 package com.xpanxion.myapp.student13;
 
 import java.lang.reflect.Array;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Locale;
 
 public class ShoppingCart {
 
@@ -33,6 +36,7 @@ public class ShoppingCart {
         items.add(item);
     }
 
+
     public void calculateTotal() {
         for (Item item: items) {
         Total = (Total + item.getPrice() * item.getQuantity());
@@ -43,28 +47,27 @@ public class ShoppingCart {
         Total = Total + Total * salesTax;
     }
 
-    // Added shipping fee inside getTotal method.
-    public float getTotal() {
-        if (Total > shippingBarrier) {
+    public String getTotal() {
+        if (Total >= shippingBarrier) {
             TotalCost = Total + shippingCharge;
         } else if (Total < shippingBarrier) {
             TotalCost = Total;
         }
+        Locale locale = new Locale("en", "US");
+        NumberFormat totalCostFormat = NumberFormat.getCurrencyInstance(locale);
 
-        return TotalCost;
+        return totalCostFormat.format(TotalCost);
     }
 
     public String shipOrder(String Name, String Street_Address, String City, String State, int Zip) {
 
-//        Invoice invoice = new Invoice(Name, Street_Address, City, State, Zip);
-        for (Item item: items) {
-
-        }
+        Enumeration
+//        for (int i = 0; i < items.size(); i++) {
+//            for ()
+//        }
 
         return "Ship to:" + "\n\t" + Name + "\n\t" + Street_Address + "\n\t" + City + "," + State + " " + Zip
                 + "\n" + "Items" + "\n-----\n" + "\n" + "Total Cost" + "\n" + "---------" + "\n" + TotalCost;
     }
-
-
 
 }

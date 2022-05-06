@@ -1,6 +1,7 @@
 package com.xpanxion.myapp.student13;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class Main {
         ex2();
         ex4();
         ex5();
-        // ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -65,6 +66,11 @@ public class Main {
     }
 
     private static void ex6() {
-        System.out.println("Todo...");
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10,3));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
+        }
     }
 }
