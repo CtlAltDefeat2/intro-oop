@@ -1,7 +1,6 @@
 package com.xpanxion.myapp.student10;
 
 import java.util.ArrayList;
-import java.util.ListIterator;
 
 public class Items {
     public float price;

@@ -56,9 +56,13 @@ public class Main {
         shoppingCart.addItem(new Items(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Items(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
-        System.out.println(shoppingCart.getTotal());
-
-
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        System.out.println(invoice);
     }
-// }
+
+
+
+//    private static void ex6() {
+//        System.out.println("ex6");
+//    }
 }
