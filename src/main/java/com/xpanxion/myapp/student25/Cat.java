@@ -6,7 +6,6 @@ public class Cat extends Animal {
     private String Color;
 
     public Cat(String name, String nickname, String color) {
-        super();
         this.name = name;
         this.Nickname = nickname;
         this.Color = color;
