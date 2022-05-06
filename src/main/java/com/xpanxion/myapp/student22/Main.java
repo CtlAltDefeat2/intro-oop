@@ -59,7 +59,12 @@ public class Main {
         var shoppingCart = new ShoppingCart();
         shoppingCart.addItem(new Item(2.0f, 4, "socks"));
         shoppingCart.addItem(new Item(10.0f, 2, "Shirts"));
+        //shoppingCart.shoppingOrder(new Invoice("jhon", "123 Green Street", "Austin", "TX",78737));
         shoppingCart.calculateTotal();
+       // shoppingCart.shippingCost();
         System.out.println(shoppingCart.getTotal());
+        System.out.println(shoppingCart.shippingCost());
+        var invoice = shoppingCart.shipOrder("Jhon", " 1111", "auxtin", "TX", 112, shoppingCart);
+        System.out.println(invoice);
     }
 }
