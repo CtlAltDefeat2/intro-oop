@@ -6,9 +6,10 @@ import java.util.ListIterator;
 import java.util.Locale;
 
 public class ShoppingCart {
+//    private Items item = new item();
 
     private ArrayList cart;
-    private float total;
+    private float total = 0;
     private ArrayList<Items> Item;
     private float totalTax;
     private float shippingCost;
@@ -22,13 +23,17 @@ public class ShoppingCart {
     private ArrayList description = new ArrayList();
     private ArrayList<Float> price = new ArrayList();
     private ArrayList<Integer> quantity = new ArrayList();
-    private ArrayList totalItems = new ArrayList();
+    private ArrayList Titems = new ArrayList();
+    private ArrayList<Items> iterator = new ArrayList();
+
+
+
 
     private float itemTotal = 0;
 
 
     ShoppingCart(){
-        this.item = new ArrayList<Items>();
+        this.Item = new ArrayList<Items>();
         this.total = total;
     }
 
@@ -37,16 +42,15 @@ public class ShoppingCart {
     }
 
     public void addItem(Items item){
-        this.item.add(item);
+        this.Item.add(item);
     }
 
     public float calculateTotal(){
-        ListIterator<Items> iterator = item.ListIterator();
-        this.total = 0;
+        ListIterator<Items> iterator = Item.listIterator();
         while(iterator.hasNext()){
             Items item2 = iterator.next();
-            this.total = this.total + (item2.getPrice() * item2.getQuantity());
-            totalTax = (float) ((total + shippingCost) * .1);
+            total = total + (item2.getPrice() * item2.getQuantity());
+            totalTax = (float) ((total + shippingCost) * 1.1);
         }
         return total;
     }
@@ -72,25 +76,25 @@ public class ShoppingCart {
         return "Ship to " + "\n\t" + name + "\n\t" + stAddress + "\n\t" + city + "," + " " + state + " " + zip + "\n\nItems\n-----\n" + listDesc() + "\n\nShipping: Free" + moneyChanger(shippingCost) + "\n\nTotal cost\n---------\n" + moneyChanger(total);
     }
     public String listDesc() {
-        for (i = 0, i < item.size(), i++) {
+        for (int i = 0; i < Item.size(); i++) {
             listFiller();
-            return description.get(i) + "\t" + moneyChanger(price.get(i)) + "\t(" + quantity.get(i) + ")\t" + totalItems.get(i+1);
+            return description.get(i) + "\t" + moneyChanger(price.get(i)) + "\t(" + quantity.get(i) + ")\t" + Titems.get(i+1);
         }
         return null;
     }
 
     public void listFiller() {
-        listFiller<Items> iterator = items.listIterator();
+        ListIterator<Items> iterator = Item.listIterator();
 
-        while (iterator.hasnext()); {
-            for (int i = 0, i < item.size(), i++) {
+        while (iterator.hasNext()); {
+            for (int i = 0; i < Item.size(); i++) {
                 Items item2 = iterator.next();
                 description.add(item2.getDescription());
                 price.add(item2.getPrice());
                 quantity.add(item2.getQuantity());
-                totalItems = quantity.get(i) + price.get(i);
+                itemTotal = item2.getPrice() + item2.getQuantity();
                 var itemPrice = moneyChanger(itemTotal);
-                this.totalItems.add(itemPrice);
+                this.Titems.add(itemPrice);
             }
         }
     }
