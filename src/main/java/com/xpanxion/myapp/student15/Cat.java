@@ -8,6 +8,13 @@ public class Cat {
     private String color;
 
 
+//Integer a = null;
+// Float
+    // Double
+        //Character//
+    // Short
+   // Long
+
     }
 
 

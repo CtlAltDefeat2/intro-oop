@@ -9,7 +9,7 @@ private static String variable = "";
 
     // generate constructor
 
-    public Calculator(int number1, int number2) {
+    public Calculator() {
         this.number1 = number1;
         this.number2 = number2;
     }

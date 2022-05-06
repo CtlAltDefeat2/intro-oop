@@ -53,19 +53,7 @@ public class Person extends Animal {
         return message;
     }
 
-// Refactor the Person class to subclass (extend) a class called Animal. Move the age from the Person class to the Animal class.
-// Create a Dog and Cat class that subclass the Animal class.
-//
-// The Dog and Cat class have the following properties:
-//
-// Name
-// Nickname
-// Color
 
-
-
-
-//
 //Overrides
 
     @Override
