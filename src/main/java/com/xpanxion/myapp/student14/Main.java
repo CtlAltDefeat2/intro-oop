@@ -55,10 +55,14 @@ public class Main {
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
-        //calculateTotal method
-        //output is getTotal()
-            //add items price in array list together
         System.out.println(shoppingCart.getTotal());
+
+        System.out.println(shoppingCart.getAfterTax());
+        System.out.println(shoppingCart.getShippingFees());
+
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
+        System.out.println(invoice);
+
 
     }
 }

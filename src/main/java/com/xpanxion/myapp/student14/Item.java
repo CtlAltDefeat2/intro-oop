@@ -20,10 +20,6 @@ public class Item {
         return price;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
     public float getQuantity() {
         return quantity;
     }
