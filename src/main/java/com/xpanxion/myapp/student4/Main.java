@@ -5,8 +5,8 @@ public class Main {
        // ex1();
         // ex2();
          //ex3();
-         ex4();
-        // ex5();
+        // ex4();
+         ex5();
     }
 
     private static void ex1() {
