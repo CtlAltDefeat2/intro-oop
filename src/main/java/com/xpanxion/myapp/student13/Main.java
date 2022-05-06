@@ -29,6 +29,7 @@ public class Main {
 
     }
 
+    // I just wanted to see the output for ex2.
     private static void ex2() {
 
         var d1 = new Dog("Rikku", "Spots", "White");
@@ -61,7 +62,7 @@ public class Main {
         System.out.println(shoppingCart.getTotal());
 
 
-        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
+        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
         System.out.println(invoice);
     }
 

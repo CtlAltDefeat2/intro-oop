@@ -61,7 +61,7 @@ public class ShoppingCart {
 
     public String shipOrder(String Name, String Street_Address, String City, String State, int Zip) {
 
-        Enumeration
+//        Enumeration
 //        for (int i = 0; i < items.size(); i++) {
 //            for ()
 //        }

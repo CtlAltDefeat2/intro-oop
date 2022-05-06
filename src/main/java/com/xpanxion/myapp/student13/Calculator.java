@@ -44,8 +44,12 @@ public class Calculator implements Calculatable{
         return calculate;
     }
 
-
-    public ArrayList<String> getHistory() {
-        return addHistory;
+    @Override
+    public String getHistory() {
+        var retVal = "";
+        for (int i = 0; i < addHistory.size(); i++) {
+            retVal += addHistory.get(i);
+        }
+        return retVal;
     }
 }

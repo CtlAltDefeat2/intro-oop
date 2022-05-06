@@ -21,6 +21,7 @@ public class Person extends Animal{
         this.lastName = lastName;
         this.countPerson++;
     }
+
     // Additional parameters constructor
     Person(String firstName, String lastName, byte age, int ssn) {
         super(age);
