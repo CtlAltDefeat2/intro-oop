@@ -12,12 +12,24 @@ public class Model extends Honda{
         this.horsePower = horsePower;
     }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getMpg() {
+        return mpg;
+    }
+
+    public int getHorsePower() {
+        return horsePower;
+    }
+
     @Override
     public void Details() {
         super.Details();
-        System.out.println("Model: " + model);
-        System.out.println("MPG: "+ mpg);
-        System.out.println("HorsePower: " + horsePower);
+        System.out.println("Model: " + getModel());
+        System.out.println("MPG: "+ getMpg());
+        System.out.println("HorsePower: " + getHorsePower());
 
     }
 }

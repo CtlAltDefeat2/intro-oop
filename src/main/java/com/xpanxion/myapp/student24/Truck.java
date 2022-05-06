@@ -21,7 +21,7 @@ public class Truck extends Car {
     @Override
     public void Details() {
         super.Details();
-        System.out.println("Number of total wheels truck has : " + numberOfWheels);
-        System.out.println("MPG: " + mpg);
+        System.out.println("Number of total wheels truck has : " + getNumberOfWheels());
+        System.out.println("MPG: " + getMpg());
     }
 }

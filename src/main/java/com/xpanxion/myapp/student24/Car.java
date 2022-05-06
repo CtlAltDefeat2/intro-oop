@@ -10,9 +10,22 @@ public class Car {
         this.numberOfWheels = numberOfWheels;
         this.price = price;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getNumberOfWheels() {
+        return numberOfWheels;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
     public void Details(){
-        System.out.println("Color: " + color);
-        System.out.println("Number Of Wheels: " + numberOfWheels);
-        System.out.println("Price: " + price);
+        System.out.println("Color: " + getColor());
+        System.out.println("Number Of Wheels: " + getNumberOfWheels());
+        System.out.println("Price: " + getPrice());
     }
 }
