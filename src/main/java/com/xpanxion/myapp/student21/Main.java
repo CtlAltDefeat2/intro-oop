@@ -68,14 +68,16 @@ public class Main {
     }
 
     private static void ex5() {
-        //var shoppingCart = new ShoppingCart();
-        var shoppingCart = new ShoppingCart(5.0F);
-        shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
-        shoppingCart.addItem(new Item(5.00F, 2, "Shirts"));
+        //Creates a shopping cart with a shipping charge of $5 if the total is less than $10
+        var shoppingCart = new ShoppingCart(5.00f);
+        //These two items are added to the cart through the "addItem" method in ShoppingCart
+        shoppingCart.addItem(new Item(2.00F, 1, "Socks"));
+        shoppingCart.addItem(new Item(5.00F, 5, "Shirts"));
+        //loops through the items in the list, adds them up, applies tax, and determines if the shipping fee is applied
         shoppingCart.calculateTotal();
-        System.out.println(shoppingCart.getTotal());
-
+        //These are the parameters that are passed into our "shoppingCart" object along with the items and total.
         var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
+        // This prints out the custom invoice toString method we made in the invoice class
         System.out.println(invoice);
     }
 }
