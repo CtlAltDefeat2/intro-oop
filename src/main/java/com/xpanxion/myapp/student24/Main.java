@@ -9,7 +9,8 @@ public class Main {
         // ex3();
         //ex4();
         //ex5();
-        ex6();
+        //ex6();
+        ex7();
     }
 
 
@@ -71,6 +72,37 @@ public class Main {
         for (Shape s : shapes) {
             System.out.println(s.draw());
         }
+    }
+    private static void ex7(){
+//        Honda car = new Honda("Black",4,34000,170,2021);
+//        car.Details();
+        System.out.println("Car Features are as follows: ");
+        System.out.println("---------------------------");
+        Model civic1 = new Model("Black", 4, 35000,170,2022,"Civic", 42,180);
+        civic1.Details();
+
+        System.out.println("\n\n2nd Car details are as follow");
+
+        Model civic2 = new Model("Blue",4,39000,170,2022,"Civic", 33, 180);
+        civic2.Details();
+        System.out.println("\n\nFollowing trucks are for sale");
+        Truck truck1= new Truck("White",18,50000,20,22);
+        truck1.Details();
+        System.out.println("\n\n");
+        Truck truck2 = new Truck("Silver",18,52000,20,22);
+        truck2.Details();
+
+        // Sorting
+        // Put all cars in a list, sort the cars based on price, color,
+        //   You can modify your class so that it can be sorted
+
+        // Equality/Copying
+//        var c1 = new Car();
+//        var c2 = new Car();
+
+
+
+
     }
 
 }
