@@ -8,9 +8,9 @@ public class Main {
       //ex2();
       //ex3();
       // ex4();
-       //ex5();
+       ex5();
         //ex6();
-       ex7();
+       //ex7();
     }
     private static void ex1(){
       //  var p1 = new Person();
@@ -57,7 +57,7 @@ public class Main {
     }
 //skipping Ex.3
     private static void ex5() {
-        var shoppingCart = new ShoppingCart(5);
+        var shoppingCart = new ShoppingCart( 5);
         shoppingCart.addItem(new Item(2.00F, 4, "Socks"));
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
@@ -79,7 +79,6 @@ public class Main {
         //System.out.println(Footballfield.isAvailable("Fellowship", 0.0));
         //System.out.println(Footballfield.makeReservation("Fellowship", 0.0));
        // System.out.println(Footballfield.cancelReservation("Fellowship", 0.0));
-
 
     }
 }

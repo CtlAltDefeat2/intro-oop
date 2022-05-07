@@ -19,11 +19,9 @@ public class ShoppingCart {
          total = total + ((cart.get(i).getPrice()) * (cart.get(i).getQuantity()));
 
          totalAfterTax = (float) (total * 0.01) + total;
-         if (total < 10) {
-             totalAfterTax = totalAfterTax + ship;
-
-         }
-     }
+         if (total < 10)  totalAfterTax = totalAfterTax + ship;
+           else ship = 0;
+              }
  }
      public double getTotal() {
          return totalAfterTax;
