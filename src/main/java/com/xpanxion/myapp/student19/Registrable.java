@@ -5,7 +5,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 public interface Registrable {
-    boolean isAvailable(String field, double day);
-    String makeReservation(String field, double day);
-     String cancelReservation(String field, double day);
+    String isAvailable(String field, Date day);
+    String makeReservation(String field, Date day);
+    String cancelReservation(String field, Date day);
 }

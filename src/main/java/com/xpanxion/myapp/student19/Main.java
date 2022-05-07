@@ -1,5 +1,6 @@
 package com.xpanxion.myapp.student19;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.StringTokenizer;
 import java.sql.Array;
 public class Main {
@@ -8,9 +9,9 @@ public class Main {
       //ex2();
       //ex3();
       // ex4();
-       ex5();
-        //ex6();
-       //ex7();
+      // ex5();
+      //ex6();
+      ex7();
     }
     private static void ex1(){
       //  var p1 = new Person();
@@ -75,10 +76,12 @@ public class Main {
     }
     //ex7 Model a domain of your choice similar to the exercises above.
     private static void ex7(){
-    var footballField = new Footballfield();
-        //System.out.println(Footballfield.isAvailable("Fellowship", 0.0));
-        //System.out.println(Footballfield.makeReservation("Fellowship", 0.0));
-       // System.out.println(Footballfield.cancelReservation("Fellowship", 0.0));
+    var field = new Footballfield();
+    Date D1 = new Date();
+
+        System.out.println(field.isAvailable("Fellowship", D1));
+        System.out.println(field.makeReservation("Fellowship", D1));
+        System.out.println(field.cancelReservation("Fellowship", D1));
 
     }
 }
