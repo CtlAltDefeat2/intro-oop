@@ -10,9 +10,16 @@ public class Main {
         // ex1();
         // ex2();
         // ex3();
-        //  ex4();
+        // ex4();
         // ex5();
-        ex6();
+        // ex6();
+        ex7();
+
+    }
+
+    private static void ex7() {
+        System.out.println("Fruits and vegetables are delicious year-round foods!");
+        }
     }
     /*    private static void ex1() {
             var p1 = new Person();
@@ -67,7 +74,7 @@ public class Main {
         var invoice = cart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
         System.out.println(invoice);*/
 
-    private static void ex6() {
+    /*private static void ex6() {
 
         var shapes = new ArrayList<Shape>();
         shapes.add(new Square(3));
@@ -101,6 +108,11 @@ public class Main {
         *        *
         **********
         ```*/
+
+
+
+
+
 
 
 
