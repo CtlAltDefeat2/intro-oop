@@ -1,6 +1,8 @@
 package com.xpanxion.myapp.student9;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ShoppingCart {  // base class
     //DATA MEMBERS
@@ -58,9 +60,13 @@ public class ShoppingCart {  // base class
     public float getTotal() {  //Accessors = getter
         return total;
     }
-        public Invoice shipOrder(String name, String streetAddress, String city, String state, int zipCode){
-        var invoice = new Invoice(name, streetAddress ,city ,state , zipCode );
-        return invoice;
+
+    public Invoice shipOrder(String name, String streetAddress, String city, String state, int zipCode){
+        var Invoice = new Invoice(name, streetAddress ,city ,state , zipCode );
+        return Invoice;
+
+        // String retVal = " ";
+        //   retVal = name + "\n" + streetAddress + "\n" + city + ", " + state + ", "  + zipCode;
 
     }
 

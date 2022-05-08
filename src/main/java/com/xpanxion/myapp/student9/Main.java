@@ -1,5 +1,9 @@
 package com.xpanxion.myapp.student9;
 
+import java.util.ArrayList;
+import java.util.Objects;
+import java.beans.beancontext.BeanContextMembershipEvent;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,7 +11,8 @@ public class Main {
         // ex2();
         // ex3();
         //  ex4();
-        ex5();
+        // ex5();
+        ex6();
     }
     /*    private static void ex1() {
             var p1 = new Person();
@@ -27,7 +32,7 @@ public class Main {
             var dog = new Dog("Jonesy", "jones", "brown");
 
 
-  /*private static void ex2() {
+  private static void ex2() {
         System.out.println("Todo...");
     }
 
@@ -48,9 +53,9 @@ public class Main {
         System.out.println(result4);
         System.out.println(calculator.getHistory());
 
-        //System.out.println("Todo...");*/
+        //System.out.println("Todo...");
 
-    private static void ex5() {
+        private static void ex5() {
         System.out.println("Exercise 5");
         // Define variables.
         var cart = new ShoppingCart();
@@ -60,9 +65,46 @@ public class Main {
         System.out.println(cart.getTotal());
 
         var invoice = cart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
-        System.out.println(invoice);
+        System.out.println(invoice);*/
+
+    private static void ex6() {
+
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10, 3));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
+        }
     }
 }
+/*# Ex. 6 Classic Polymorphism
+
+        Create a `Square` and `Rectangle` class that extends an abstract class called `Shape` that
+        can be consumed in the following manner:
+
+        ```java
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(3));
+        shapes.add(new Rectangle(10,3));
+        for (Shape s : shapes) {
+        System.out.println(s.draw());
+        }
+        ```
+
+        Output:
+        ```
+        ***
+        * *  <== Pretend this resembles a square.
+        ***
+
+        **********
+        *        *
+        **********
+        ```*/
+
+
+
+
 
 
 

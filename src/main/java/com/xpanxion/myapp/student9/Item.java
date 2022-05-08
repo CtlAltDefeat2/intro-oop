@@ -18,4 +18,19 @@ public class Item {
     public int getQuantity() {
         return quantity;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public float calculateTotal() {
+        return calculateTotal();
+    }
 }
+
+
+
+
+
+
+
