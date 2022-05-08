@@ -1,5 +1,7 @@
 package com.xpanxion.myapp.student11;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         //ex1();
@@ -7,6 +9,7 @@ public class Main {
         //ex3();
         //ex4();
         //ex5();
+          ex6();
     }
 //            private static void ex1() {
 //            var p1 = new Person();
@@ -55,17 +58,13 @@ public class Main {
 
 //    System.out.println("Todo...");
 
-    private static void ex5() {
-        var shoppingCart = new ShoppingCart();
-        var item = new Item(2.00f, 4, "Socks");
-        shoppingCart.addItem(item);
-        shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
-        shoppingCart.calculateTotal();
-        System.out.println(shoppingCart.getTotal());
-        System.out.println("Ship to:");
-        var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Street", "Austin", "TX", 78737);
-        System.out.println(invoice);
-
+//
+private static void ex6() {
+    var shapes = new ArrayList<Shape>();
+    shapes.add(new Square(3));
+    shapes.add(new Rectangle(10,3));
+    for (Shape s : shapes) {
+        System.out.println(s.draw());
     }
-}
+}}
 
