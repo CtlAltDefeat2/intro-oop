@@ -1,8 +1,9 @@
 package com.xpanxion.myapp.student12;
 
+import java.util.ArrayList;
 import java.util.ListIterator;
 
-public class Broccoli extends Garden {
+public class Broccoli extends Vegetable {
     //
     //Data Members
     //
@@ -15,7 +16,7 @@ public class Broccoli extends Garden {
 
     }
 
-    Broccoli(String variety, String growingSeason, int spaceNeed, int seasonLength) {
+    Broccoli(String variety, String growingSeason, int spaceNeed) {
         this.variety = variety;
         this.growingSeason = growingSeason;
         this.numberPlant = spaceNeed;
@@ -26,13 +27,13 @@ public class Broccoli extends Garden {
     //
     //Overriders
     //
-    public void add(Broccoli broccoli) {
+    Vegetable add(Vegetable broccoli) {
         this.veg.add(broccoli);
-
+        return broccoli;
     }
 
     String checkDate() {
-        ListIterator<Garden> iterator1 = veg.listIterator();
+        ListIterator<Vegetable> iterator1 = veg.listIterator();
         var result = "";
         while (iterator1.hasNext()) {
             for (int i = 0; i < veg.size(); i++) {

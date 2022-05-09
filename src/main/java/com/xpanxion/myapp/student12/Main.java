@@ -9,7 +9,7 @@ public class Main {
 //        ex3();
 //        ex4();
 //        ex5();
-//        ex6();
+        ex6();
         ex7();
     }
 
@@ -83,10 +83,10 @@ public class Main {
     private static void ex7(){
         System.out.println("Ex 7.)");
         var garden = new Garden(20);
-        var veg = new ArrayList<Garden>();
-        veg.add(new Tomato("red","summer",1, 110));
-        veg.add(new Squash("summer","summer",1,100));
-        veg.add(new Broccoli("broccoli","spring",1,90));
+        var veg = new ArrayList<Vegetable>();
+        veg.add(new Tomato("red","summer",1));
+        veg.add(new Squash("summer","summer",1));
+        veg.add(new Broccoli("broccoli","spring",1));
         System.out.println(veg);
 
 

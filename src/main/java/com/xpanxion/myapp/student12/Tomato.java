@@ -2,7 +2,7 @@ package com.xpanxion.myapp.student12;
 
 import java.util.ListIterator;
 
-public class Tomato extends Garden {
+public class Tomato extends Vegetable {
     //
     //Data Members
     //
@@ -14,7 +14,7 @@ public class Tomato extends Garden {
     Tomato(){
 
     }
-    Tomato(String variety, String growingSeason, int numberPlant, int seasonLength){
+    Tomato(String variety, String growingSeason, int numberPlant){
         this.variety = variety;
         this.growingSeason = growingSeason;
         this.numberPlant = numberPlant;
@@ -25,13 +25,14 @@ public class Tomato extends Garden {
     //
     //Overriders
     //
-    public void add(Tomato tomato){
+    Vegetable add(Vegetable tomato){
         this.veg.add(tomato);
+        return tomato;
 
     }
 
     String checkDate() {
-        ListIterator<Garden> iterator1 = veg.listIterator();
+        ListIterator<Vegetable> iterator1 = veg.listIterator();
         var result = "";
         while (iterator1.hasNext()) {
             for (int i = 0; i < veg.size(); i++) {
