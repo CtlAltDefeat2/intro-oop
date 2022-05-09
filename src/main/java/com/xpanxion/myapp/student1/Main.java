@@ -58,7 +58,7 @@ public class Main {
         shoppingCart.addItem(new Item(10.00F, 2, "Shirts"));
         shoppingCart.calculateTotal();
         System.out.println(shoppingCart.getTotal());
-        n/
+
 
 
 
