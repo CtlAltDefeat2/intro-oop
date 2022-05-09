@@ -1,35 +1,35 @@
 package com.xpanxion.myapp.student26;
 
 import javax.swing.text.html.HTMLDocument;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        ex5();
+        ex6();
     }
 
     private static void ex1() {
 
-       var p1 = new Person();
-       var p2 = new Person("John", "Smith");
-       var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
+        var p1 = new Person();
+        var p2 = new Person("John", "Smith");
+        var p3 = new Person("Mary", "Jane", (byte) 12, 123456789);
 
-       System.out.println(p1.speak());
-       System.out.println(p2.speak());
-       System.out.println(p3.speak());
+        System.out.println(p1.speak());
+        System.out.println(p2.speak());
+        System.out.println(p3.speak());
 
-       System.out.println(p1);
-       System.out.println(p2);
-       System.out.println(p3);
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
 
-       System.out.println("Person count: " + Person.getPersonCount());
-
+        System.out.println("Person count: " + Person.getPersonCount());
 
 
     }
 
     private static void ex2() {
-        Dog d1= new Dog("Champion", "champ", "white");
+        Dog d1 = new Dog("Champion", "champ", "white");
         Dog d2 = new Dog();
 
     }
@@ -60,12 +60,18 @@ public class Main {
         shoppingCart.calculateTotal();
         System.out.println(shoppingCart.getTotal());
 
+    }
+
+    private static void ex6() {
+
+        var shapes = new ArrayList<Shape>();
+        shapes.add(new Square(5));
+        shapes.add(new Rectangle(10, 5));
+        for (Shape s : shapes) {
+            System.out.println(s.draw());
 
 
-
-
-
-
+        }
 
     }
 }
