@@ -1,6 +1,7 @@
 package com.xpanxion.myapp.student14;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
         // ex4();
         // ex5();
         //ex6();
-        //ex7();
+        ex7();
     }
 
     private static void ex1() {
@@ -76,6 +77,7 @@ public class Main {
         }
     }
     private static void ex7(){
-
+        System.out.println("Welcome to Address Book \n What would you like to do? \n (Select one) \n 1. View Address Book \n 2. Add new Info \n 3. Search");
+        Scanner scanner = new Scanner(System.in);
     }
 }
