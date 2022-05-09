@@ -78,6 +78,9 @@ public class Main {
     }
     private static void ex7(){
         System.out.println("Welcome to Address Book \n What would you like to do? \n (Select one) \n 1. View Address Book \n 2. Add new Info \n 3. Search");
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+        var addressbook = new AddressBook();
+        addressbook.addItem(new Information("Kathryn Cohen", "1 church rd wilkesbarre pa 18702", "5705921835");
+
     }
 }

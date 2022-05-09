@@ -6,9 +6,6 @@ class ShoppingCart {
     //
     //Data Members
     //
-    private float price;
-    private int quantity;
-    private String description;
     private float total;
     private ArrayList<Item> itemsList;
     private float shippingTotal;

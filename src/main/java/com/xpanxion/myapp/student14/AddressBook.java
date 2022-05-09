@@ -5,13 +5,22 @@ import java.util.ArrayList;
 public class AddressBook implements Updatable {
     //data members
 
-    private ArrayList<String>bookList=new ArrayList<>();
+    private ArrayList<Information>bookList=new ArrayList<>();
     //constructor
-    public AddressBook(ArrayList<String> bookList) {
+
+
+    public AddressBook(ArrayList<Information> bookList) {
         this.bookList = bookList;
     }
 
+    public AddressBook() {
+
+    }
+
     //methods
+    public void addItem(Information entry) {
+        this.bookList.add(entry);
+    }
     //overrides
     @Override
     public String name (String firstName, String lastName) {
@@ -38,7 +47,10 @@ public class AddressBook implements Updatable {
         this.bookList.add(phoneString);
         return phoneString;
     }
-//    String name (String firstName, String lastName);
-//    String address (String streetAddress, String city, String state, String zipCode);
-//    String phoneNumber (String phone);
+
+    @Override
+    public String getBook() {
+        return null;
+    }
+
 }
