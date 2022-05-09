@@ -10,7 +10,8 @@ public class Main {
         // ex3(); //not doing ex3
         //ex4();
         //ex5();
-        ex6( );
+        //ex6( );
+        ex7( );
     }
 
     private static void ex1() {
@@ -77,4 +78,14 @@ public class Main {
             System.out.println(s.draw());//(s.draw()); is where the magic happens.
         }
         }
+    private static void ex7(){
+        var shapes = new ArrayList<Shape>(  );
+        shapes.add( new Triangle(10,10));
+        for (Shape s : shapes){
+            System.out.println(s.draw() );
+        }
+
     }
+    }
+
+
