@@ -74,6 +74,7 @@ public class Main {
         var shapes = new ArrayList<Shape>();
         shapes.add(new Square(4));
         shapes.add(new Rectangle(12, 4));
+        shapes.add(new Triangle(7));
         for (Shape s : shapes) {
             System.out.println(s.draw());
         }
