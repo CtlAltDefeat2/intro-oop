@@ -21,7 +21,7 @@ private int width;
                     System.out.print("*");
                 } else System.out.print(" ");
             }
-            System.out.print("\n");
+            System.out.print(" \n");
         }
         return "Rectangle";
     }

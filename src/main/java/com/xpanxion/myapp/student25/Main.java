@@ -67,6 +67,7 @@ public class Main { //Wendy
         var shapes = new ArrayList<Shape>();
         shapes.add(new Square(3)); // .add is a method already included in Arraylists.
         shapes.add(new Rectangle(10,3));
+        shapes.add(new Triangle(5));
         for (Shape s : shapes) {
             System.out.println(s.draw());
         }
