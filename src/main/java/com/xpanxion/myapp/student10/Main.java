@@ -62,7 +62,7 @@ public class Main {
 
 
 
-//    private static void ex6() {
-//        System.out.println("ex6");
-//    }
+    private static void ex6() {
+        System.out.println("ex6");
+    }
 }
