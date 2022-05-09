@@ -68,19 +68,21 @@ public class Main {
         var invoice = shoppingCart.shipOrder("Jon Smith", "123 Green Stree", "Austin", "TX", 78737);
         System.out.println(invoice);
     }
+
     private static void ex6() {
         var shapes = new ArrayList<Shape>();
         shapes.add(new Square(3));
-        shapes.add(new Rectangle(10,3));
+        shapes.add(new Rectangle(10, 3));
         for (Shape s : shapes) {
             System.out.println(s.draw());
         }
     }
-    private static void ex7(){
+
+    private static void ex7() {
         System.out.println("Welcome to Address Book \n What would you like to do? \n (Select one) \n 1. View Address Book \n 2. Add new Info \n 3. Search");
 //        Scanner scanner = new Scanner(System.in);
         var addressbook = new AddressBook();
-        addressbook.addItem(new Information("Kathryn Cohen", "1 church rd wilkesbarre pa 18702", "5705921835");
-
+        addressbook.addEntry(String.valueOf(new Information("Kathryn Cohen", "1 church rd wilkesbarre pa 18702", "5705921835")));
+        System.out.println(addressbook.getBookList());
     }
 }

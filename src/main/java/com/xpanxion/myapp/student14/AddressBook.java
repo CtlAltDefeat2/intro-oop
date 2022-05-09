@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class AddressBook implements Updatable {
     //data members
 
-    private ArrayList<Information>bookList=new ArrayList<>();
+    public ArrayList<String> bookList=new ArrayList<>();
     //constructor
 
 
-    public AddressBook(ArrayList<Information> bookList) {
+    public AddressBook(ArrayList<String> bookList) {
         this.bookList = bookList;
     }
 
@@ -18,8 +18,16 @@ public class AddressBook implements Updatable {
     }
 
     //methods
-    public void addItem(Information entry) {
+    public ArrayList<String> addEntry (String entry) {
         this.bookList.add(entry);
+    return bookList;
+    }
+    public String getBookList() {
+        //var s = " ";
+        for (String s : bookList) {
+            System.out.println(bookList);
+        }
+        return String.valueOf(bookList);
     }
     //overrides
     @Override

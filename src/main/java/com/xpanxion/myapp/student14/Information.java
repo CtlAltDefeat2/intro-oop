@@ -28,4 +28,14 @@ public  class Information {
 //methods
 
     //overrides
+
+
+    @Override
+    public String toString() {
+        return "Information{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
 }
