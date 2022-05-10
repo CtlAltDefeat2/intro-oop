@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 public class ShoppingCart {
     private static float sum = 0;
-    private ArrayList items = new ArrayList<Item>();
+    private final ArrayList items = new ArrayList<Item>();
+    private final double SALE_TAX = 10.0/100;
+    private final double SHIPPING_CHARGE_THRESHOLD = 10;
     protected float shippingCharge;
     public ArrayList<Item> getItems() {
         return items;
@@ -18,14 +20,14 @@ public class ShoppingCart {
         getItems().add(I);
     }
     public void calculateTotal(){
+        float temSum = 0;
         for(Item i : getItems()){
-            for(int j = i.getQuantity(); j > 0; j--){
-                sum += i.getPrice();
-            }
+            temSum += i.getTotal();
         }
-        if(sum < 10)
-            sum += shippingCharge;
-        sum *= 1.1;
+        temSum += (temSum*SALE_TAX);
+        if(temSum < SHIPPING_CHARGE_THRESHOLD)
+            temSum += shippingCharge;
+        sum = temSum;
     }
     public String getTotal(){
         NumberFormat total = NumberFormat.getCurrencyInstance();
