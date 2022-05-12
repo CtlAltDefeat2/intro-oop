@@ -8,7 +8,8 @@ public class Main {
         // ex2();
         // ex3();
         //ex4();
-         ex5();
+       //  ex5();
+        ex6();
     }
 
     private static void ex1() {
@@ -61,10 +62,31 @@ public class Main {
         shoppingCart.addItem(new Item(10.0f, 2, "Shirts"));
         //shoppingCart.shoppingOrder(new Invoice("jhon", "123 Green Street", "Austin", "TX",78737));
         shoppingCart.calculateTotal();
-       // shoppingCart.shippingCost();
+       shoppingCart.shippingCost();
         System.out.println(shoppingCart.getTotal());
+        System.out.println();
         System.out.println(shoppingCart.shippingCost());
-        var invoice = shoppingCart.shipOrder("Jhon", " 1111", "auxtin", "TX", 112, shoppingCart);
+        System.out.println(shoppingCart);
+        var invoice = shoppingCart.shipOrder("Jhon", " 1111", "auxtin", "TX", 112);
         System.out.println(invoice);
+    }
+    private static void ex6() {
+        var s3BillingCalculator = new S3BillingCalculator(.10F, .25F, .50F);
+        s3BillingCalculator.addStorageGB(1111, 1);
+        //s3BillingCalculator.addGetRequest(1111, 1000);
+        s3BillingCalculator.addGetRequest(1111,1000);
+        s3BillingCalculator.addPutRequest(1111, 1000);
+
+        s3BillingCalculator.addStorageGB(2222, 2);
+        s3BillingCalculator.addGetRequest(2222,2000);
+        s3BillingCalculator.addPutRequest(2222,2000);
+
+        var invoice1 = s3BillingCalculator.createInvoice(1111);
+        var invoice2 = s3BillingCalculator.createInvoice(2222);
+
+        System.out.println(invoice1);
+        System.out.println("");
+        System.out.println(invoice2);
+
     }
 }

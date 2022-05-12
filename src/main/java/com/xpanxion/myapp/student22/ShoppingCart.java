@@ -62,17 +62,17 @@ public class ShoppingCart extends Item {
         return shipping;
     }
 
-   public Invoice shipOrder(String name, String streetAddress,String city, String state, int zip, ShoppingCart shoppingCart ) { // pass in address
-       Invoice invoice = new Invoice(name, streetAddress,city, state, zip, shoppingCart); // pass in address, also pass in the shopping using this pointer
+   public Invoice shipOrder(String name, String streetAddress,String city, String state, int zip) { // pass in address
+       Invoice invoice = new Invoice(name, streetAddress,city, state, zip, this); // pass in address, also pass in the shopping using this pointer
        return invoice;
     }
 
     @Override
     public String toString() {
-        return "ShoppingCart{" +
-                "items=" + getPrice() +
+        return "ShoppingCart" +
+                 + getPrice() +
                 ", invoice=" + getQuantity() +
-                ", shippingCharge=" + getQuantity() + " "+ getTotal()+
+                ", shippingCharge=" +  " "+ getTotal()+
                 '}';
     }
 }
